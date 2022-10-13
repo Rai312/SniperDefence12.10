@@ -27,13 +27,14 @@ public class GameStateMachine : MonoBehaviour
     {
         _uI.OpeningMenu.StartButton.onClick.AddListener(SetPlayState);
         _uI.SniperMenu.StartButton.onClick.AddListener(SetSniperShootingState);
-        //_battle.WavesManager.
+        _battle.DefenderWon += SetPlayState;
     }
 
     private void OnDisable()
     {
         _uI.OpeningMenu.StartButton.onClick.RemoveListener(SetPlayState);
         _uI.SniperMenu.StartButton.onClick.RemoveListener(SetSniperShootingState);
+        _battle.DefenderWon -= SetPlayState;
     }
 
     private void Start()

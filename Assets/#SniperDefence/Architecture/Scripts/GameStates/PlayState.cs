@@ -17,9 +17,8 @@ public class PlayState : IGameState
 
     public void Enter()
     {
-
-        //Debug.Log("PlayState - Enter");
-        _placeHolder.Enable();
+        Debug.Log("PlayState - Enter");
+        _placeHolder.gameObject.SetActive(true);
         _uI.PlayMenu.Show();
 
         _placeHolder.Spawned += OnSpawned;
@@ -36,7 +35,9 @@ public class PlayState : IGameState
         _battle.InitializeDefenders();
         _battle.TeamDefender.DragAndDropSystem.gameObject.SetActive(false);
         _placeHolder.gameObject.SetActive(false);
+        //_placeHolder.Disable();
         _battle.WavesManager.CurrentWave.Enable();
+        Debug.Log("PlayState - Exit");
     }
 
     private void OnSpawned(DefenderSquad defenderSquad)

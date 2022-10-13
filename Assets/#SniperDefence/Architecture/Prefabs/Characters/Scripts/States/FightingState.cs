@@ -41,7 +41,7 @@ namespace UnitState
         {
             if (_unit is Fighter)
             {
-                Debug.Log("FightState");
+                //Debug.Log("FightState");
             }
             // if (_timeToAttack <= 0)
             // {

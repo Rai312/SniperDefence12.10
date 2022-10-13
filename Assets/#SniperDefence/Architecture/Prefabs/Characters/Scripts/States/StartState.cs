@@ -31,7 +31,7 @@ namespace UnitState
         {
             if (_unit is Fighter)
             {
-                Debug.Log("StartState");
+                //Debug.Log("StartState");
             }
         }
     }

@@ -21,8 +21,8 @@ public class Battle : MonoBehaviour
     {
         foreach (var unit in _teamDefender.Units)
         {
-            unit.Died -= CheckWin;
-            //unit.Died -= CheckWinEnemy;
+            //unit.Died -= CheckWin;
+            unit.Died -= CheckWinEnemy;
         }
 
         //foreach (var unit in _teamEnemy.Units)
@@ -32,8 +32,8 @@ public class Battle : MonoBehaviour
 
         foreach (var unit in _wavesManager.CurrentWave.Units)
         {
-            unit.Died -= CheckWin;
-            //unit.Died -= CheckWinDefenders;
+            //unit.Died -= CheckWin;
+            unit.Died -= CheckWinDefenders;
         }
     }
 
@@ -42,8 +42,8 @@ public class Battle : MonoBehaviour
         foreach (var unit in _teamDefender.Units)
         {
             unit.Initialize(_wavesManager.CurrentWave.Units);
-            unit.Died += CheckWin;
-            //unit.Died += CheckWinEnemy;
+            //unit.Died += CheckWin;
+            unit.Died += CheckWinEnemy;
         }
     }
 
@@ -57,8 +57,8 @@ public class Battle : MonoBehaviour
             //}
 
             unit.Initialize(_teamDefender.Units);
-            unit.Died += CheckWin;
-            //unit.Died += CheckWinDefenders;
+            //unit.Died += CheckWin;
+            unit.Died += CheckWinDefenders;
         }
         //_wavesManager.CurrentWave.Units[1].DebugTargets();
     }
@@ -68,6 +68,7 @@ public class Battle : MonoBehaviour
         bool isLoserEnemyTeam = _wavesManager.CurrentWave.CheckLose();
         if (isLoserEnemyTeam)
         {
+            DefenderWon?.Invoke();
             Debug.Log("isLoserEnemyTeam");
         }
     }

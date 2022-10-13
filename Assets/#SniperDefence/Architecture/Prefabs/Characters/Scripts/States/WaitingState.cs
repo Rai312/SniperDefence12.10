@@ -39,7 +39,7 @@ namespace UnitState
         {
             if (_unit is Fighter)
             {
-                Debug.Log("WaitingState");
+                //Debug.Log("WaitingState");
             }
 
             _unit.CheckDistanceToEnemy();
