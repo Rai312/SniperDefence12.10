@@ -18,8 +18,12 @@ public class Shooter : Defender
     private void TakeAim()
     {
         SetTarget();
-        
-        _ballisticsShoot.Shoot(Target.transform);
+
+        if (Target != null)
+        {
+            _ballisticsShoot.Shoot(Target.transform);
+        }
+
         
         //Bullet bullet = Instantiate(_bulletPrefab, _shootPoint.transform.position, Quaternion.identity, null);
 

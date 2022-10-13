@@ -140,6 +140,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 874982776, guid: 194b3b93583fcab4798db07c44b78c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 874982776, guid: 194b3b93583fcab4798db07c44b78c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 5196301234319593612, guid: 194b3b93583fcab4798db07c44b78c1d, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -250,17 +258,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1625875876363284080, guid: 08e8e5913b2415640bcd3c0dab24c396, type: 3}
   m_PrefabInstance: {fileID: 1811341553}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &476811491 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8003390921944674480, guid: 4d1fdf4dc7ee40647b4e98961cc8eaa0, type: 3}
-  m_PrefabInstance: {fileID: 8003390922286080083}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59a57f2986a0ab549b1deb77dfa79aa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &591401328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2359,10 +2356,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6897354757978982502, guid: 4d1fdf4dc7ee40647b4e98961cc8eaa0, type: 3}
-      propertyPath: _waves.Array.data[1]
-      value: 
-      objectReference: {fileID: 476811491}
     - target: {fileID: 6897354758462055894, guid: 4d1fdf4dc7ee40647b4e98961cc8eaa0, type: 3}
       propertyPath: _dragAndDropSystem
       value: 
