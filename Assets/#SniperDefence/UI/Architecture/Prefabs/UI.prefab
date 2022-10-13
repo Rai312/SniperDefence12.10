@@ -1161,6 +1161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DefenderSquad>k__BackingField: {fileID: 0}
+  _price: 0
+  _recalculate: 0
 --- !u!114 &1625875875564823322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,6 +1983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DefenderSquad>k__BackingField: {fileID: 3716384297490254684, guid: 9b6e70010357c3040a54d8692d2dcc9e, type: 3}
+  _price: 0
+  _recalculate: 0
 --- !u!1 &1625875876658594195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2278,6 +2282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <DefenderSquad>k__BackingField: {fileID: 181937099421458282, guid: 9e88ff9e1f4848e4097b11632f1982d8, type: 3}
+  _price: 0
+  _recalculate: 0
 --- !u!1 &7467717848668906839
 GameObject:
   m_ObjectHideFlags: 0

@@ -128,4 +128,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 200
-  _movementSpeed: 500
+  _movementSpeed: 150

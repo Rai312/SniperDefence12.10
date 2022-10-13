@@ -101,7 +101,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -139,7 +139,7 @@ PlayableDirector:
   - key: {fileID: -5351856995593599111, guid: fa0ba66c7edc5a8498c0a085297d917a, type: 2}
     value: {fileID: 7510562629953680765}
   - key: {fileID: -5351856995593599111, guid: a8cb588b718fd914b9ad8194db964f65, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 7510562629953680765}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &7510562629953680765
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510562629953680762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0adb87370ed943147994d47f5bc18b1d, type: 3}
   m_Name: 
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510562629953680762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 03cbbafa7b69e0146a23c20467adcba7, type: 3}
   m_Name: 

@@ -176,8 +176,16 @@ MonoBehaviour:
     alignWindowToBar: 1
     windowMode: 0
   _sceneHistory:
+  - name: MouseEventsDemo
+    path: Assets/Impossible Odds/MouseEvents/Examples/MouseEventsDemo.unity
   - name: DanilScene
     path: Assets/#SniperDefence/Scenes/DanilScene.unity
+  - name: Testscene
+    path: Assets/ProjectileManager/Scenes/Testscene.unity
+  - name: FieldScene
+    path: Assets/ProjectileManager/Scenes/FieldScene.unity
+  - name: SampleScene
+    path: Assets/ProjectileManager/Scenes/SampleScene.unity
   - name: SampleScene 1
     path: Assets/#SniperDefence/Scenes/SampleScene 1.unity
   - name: SampleScene 1
