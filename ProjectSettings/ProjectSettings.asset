@@ -802,6 +802,7 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
     Android: UEE
+    Standalone: UEE
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
