@@ -15,6 +15,7 @@ public class PlayState : IGameState
 
     public void Enter()
     {
+
         //Debug.Log("PlayState - Enter");
         _placeHolder.Enable();
         _uI.PlayMenu.Show();

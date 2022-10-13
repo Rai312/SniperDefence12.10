@@ -47,16 +47,16 @@ public class Battle : MonoBehaviour
         }
     }
 
-    public void InitializeEnemies()
-    {
-        //Debug.Log("InitializeEnemies");
-        foreach (var unit in _teamEnemy.Units)
-        {
-            unit.Initialize(_teamDefender.Units);
-            unit.Died += CheckWin;
+    //public void InitializeEnemies()
+    //{
+    //    //Debug.Log("InitializeEnemies");
+    //    foreach (var unit in _teamEnemy.Units)
+    //    {
+    //        unit.Initialize(_teamDefender.Units);
+    //        unit.Died += CheckWin;
 
-        }
-    }
+    //    }
+    //}
 
     private void CheckWin()
     {

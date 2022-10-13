@@ -18,9 +18,10 @@ public class InitialState : IGameState
     public void Enter()
     {
         //Debug.Log("InitialState - Enter");
+        _battle.WavesManager.Initialize();
         _uI.OpeningMenu.Show();
 
-        _battle.InitializeEnemies();
+        //_battle.InitializeEnemies();
         //_battle.WavesManager.InitializeWaves();
     }
 

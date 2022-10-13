@@ -9,28 +9,49 @@ public class WavesManager : MonoBehaviour
     [SerializeField] private TeamDefender _teamDefender;
 
     private TeamEnemy _currentWave;
+    private int _startWaveIndex = 0;
 
+    public TeamEnemy CurrentWave => _currentWave;
     public IReadOnlyList<TeamEnemy> Waves => _waves;
 
     public event Action CurrentWaveDied;
 
-    private void EnableNextWave()
+    public void Initialize()
     {
-        foreach (var wave in _waves)
-            if (wave.IsAlive)
-                wave.TeamContainer.Enable(); 
+        _currentWave = _waves[_startWaveIndex];
     }
 
-    //public void InitializeWaves()
-    //{
-    //    foreach (var wave in _waves)
-    //    {
-    //        foreach (var unit in wave.Units)
-    //        {
-    //            unit.Initialize(_teamDefender.Units);
-    //            unit.Died += CheckWin;
+    public void EnableWave()
+    {
+        _currentWave.TeamContainer.Enable();
+    }
 
-    //        }
-    //    }
-    //}
+    public void InitializeWave()
+    {
+        foreach (var unit in _currentWave.Units)
+        {
+            unit.Initialize(_teamDefender.Units);
+            //unit.Died += CheckWin;
+        }
+
+    }
+
+    private void CheckWin()
+    {
+        bool firstTeamResult = _teamDefender.CheckLose();
+        bool secondTeamResult = _currentWave.CheckLose();
+
+        //Debug.Log("CheckWin");
+        //if (firstTeamResult && secondTeamResult)
+        //{
+        //    _drawMessage.gameObject.SetActive(true);
+        //}
+        //else
+        //{
+        //    if (firstTeamResult)
+        //        _secondTeamWinText.gameObject.SetActive(true);
+        //    if (secondTeamResult)
+        //        _firstTeamWinText.gameObject.SetActive(true);
+        //}
+    }
 }

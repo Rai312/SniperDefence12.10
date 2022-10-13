@@ -46,7 +46,7 @@ public class GameStateMachine : MonoBehaviour
             [typeof(InitialState)] = new InitialState(_uI, _battle, _placeHolder),
             [typeof(OpeningState)] = new OpeningState(_uI),
             [typeof(PlayState)] = new PlayState(_uI, _placeHolder, _battle),
-            [typeof(SniperShootingState)] = new SniperShootingState(_uI, _cameraController, _sniper, _placeHolder, _teamEnemy, _teamDefender),
+            [typeof(SniperShootingState)] = new SniperShootingState(_uI, _cameraController, _sniper, _placeHolder, _battle),
             [typeof(PauseState)] = new PauseState(_uI),
             [typeof(EndLevelState)] = new EndLevelState(_uI),
             [typeof(FailState)] = new FailState(_uI),
