@@ -43,10 +43,11 @@ public class PlayState : IGameState
 
         for (int i = 0; i < defenders.Length; i++)
         {
-            defenders[i].Initialize(_battle.TeamEnemy.Units);
+            //defenders[i].Initialize(_battle.TeamEnemy.Units);
+            defenders[i].Initialize(_battle.WavesManager.CurrentWave.Units);
         }
 
-        _battle.TeamDefender.AddSpawned(defenderSquad);
+        _battle.TeamDefender.AddSpawned(defenderSquad, _battle.TeamDefender.TeamContainer);
     }
 
     private void OnMerged(DefenderSquad defenderSquad1, DefenderSquad defenderSquad2, DefenderSquad defenderSquad3)

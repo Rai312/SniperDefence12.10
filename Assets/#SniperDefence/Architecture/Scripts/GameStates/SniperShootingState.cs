@@ -22,7 +22,8 @@ public class SniperShootingState : IGameState
     {
         //Debug.Log("ShootingState - Enter");
         //_battle.WavesManager.InitializeWave();
-        //_battle.WavesManager.EnableWave();
+        _battle.InitializeEnemies();
+        _battle.WavesManager.CurrentWave.Enable();
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
         {
             _battle.WavesManager.CurrentWave.Units[i].SetWaiting();

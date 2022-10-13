@@ -6,13 +6,18 @@ using UnityEngine;
 public abstract class Team : MonoBehaviour
 {
     [SerializeField] private List<Unit> _units;
+    [SerializeField] private TeamContainer _teamContainer;
+
+    public TeamContainer TeamContainer => _teamContainer;
+
 
     public IReadOnlyList<Unit> Units => _units;
     public bool IsAlive { get; private set; } = true;
     
-    public void AddSpawned(DefenderSquad defenderSquat)
+    public void AddSpawned(DefenderSquad defenderSquat, TeamContainer teamContainer)
     {
         var defenders = defenderSquat.GetComponentsInChildren<Defender>();
+        defenderSquat.transform.parent = teamContainer.transform;
 
         for (int i = 0; i < defenders.Length; i++)
         {
@@ -36,6 +41,11 @@ public abstract class Team : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Enable()
+    {
+        gameObject.SetActive(true);
     }
 
     public bool CheckLose()

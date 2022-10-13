@@ -21,20 +21,20 @@ public class WavesManager : MonoBehaviour
         _currentWave = _waves[_startWaveIndex];
     }
 
-    public void EnableWave()
-    {
-        _currentWave.TeamContainer.Enable();
-    }
+    //public void EnableWave()
+    //{
+    //    _currentWave.TeamContainer.Enable();
+    //}
 
-    public void InitializeWave()
-    {
-        foreach (var unit in _currentWave.Units)
-        {
-            unit.Initialize(_teamDefender.Units);
-            //unit.Died += CheckWin;
-        }
+    //public void InitializeWave()
+    //{
+    //    foreach (var unit in _currentWave.Units)
+    //    {
+    //        unit.Initialize(_teamDefender.Units);
+    //        //unit.Died += CheckWin;
+    //    }
 
-    }
+    //}
 
     private void CheckWin()
     {
