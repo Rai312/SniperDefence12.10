@@ -36,6 +36,11 @@ public class WavesManager : MonoBehaviour
 
     //}
 
+    public void ChangeWave()
+    {
+        _currentWave = _waves[1];
+    }
+
     private void CheckWin()
     {
         bool firstTeamResult = _teamDefender.CheckLose();

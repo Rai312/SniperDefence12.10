@@ -70,6 +70,7 @@ public class Battle : MonoBehaviour
         {
             DefenderWon?.Invoke();
             Debug.Log("isLoserEnemyTeam");
+            _wavesManager.ChangeWave();
         }
     }
 
