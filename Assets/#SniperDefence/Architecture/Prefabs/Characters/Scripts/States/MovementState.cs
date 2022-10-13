@@ -39,6 +39,10 @@ namespace UnitState
 
         public void FixedUpdate()
         {
+            if (_unit is Fighter)
+            {
+                Debug.Log("MovementState");
+            }
             _unit.NavMeshAgent.SetDestination(_unit.Target.transform.position);
             if (Vector3.Distance(_unit.transform.position, _unit.Target.transform.position) < _unit.HitDistance)
                 _unit.StartFighting();

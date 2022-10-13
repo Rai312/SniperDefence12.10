@@ -39,7 +39,10 @@ namespace UnitState
 
         public void FixedUpdate()
         {
-
+            if (_unit is Fighter)
+            {
+                Debug.Log("TargetSearch");
+            }
         }
     }
 }

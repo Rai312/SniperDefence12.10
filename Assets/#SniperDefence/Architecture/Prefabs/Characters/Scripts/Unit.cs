@@ -51,6 +51,18 @@ public abstract class Unit : MonoBehaviour
         //    _target.Died -= OnTargetDied;
     }
 
+    //public void DebugTargets()
+    //{
+    //    for (int i = 0; i < _targets.Count; i++)
+    //    {
+    //        if (this is Enemy)
+    //        {
+    //            //Debug.Log(_targets[i]);
+    //        }
+
+    //    }
+    //}
+
     public void SetTarget()
     {
         _target = GetTarget();
@@ -110,8 +122,10 @@ public abstract class Unit : MonoBehaviour
         {
             if (this is Enemy)
             {
+                //Debug.Log("TARGET");
                 if (_targets[i] is Defender)
                 {
+
                     float distanceToTarget = Vector3.Distance(transform.position, _targets[i].transform.position);
 
                     if (distanceToTarget < _targetDistance && _targets[i].IsAlive)
@@ -142,6 +156,10 @@ public abstract class Unit : MonoBehaviour
 
     public void SetWaiting()
     {
+        //if (this is Enemy)
+        //{
+        //    //Debug.Log(this + " SetWaiting");
+        //}
         Waiting?.Invoke();
     }
 

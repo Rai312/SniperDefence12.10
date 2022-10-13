@@ -37,6 +37,11 @@ namespace UnitState
 
         public void FixedUpdate()
         {
+            if (_unit is Fighter)
+            {
+                Debug.Log("WaitingState");
+            }
+
             _unit.CheckDistanceToEnemy();
         }
     }

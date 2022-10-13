@@ -34,11 +34,12 @@ public class PlayState : IGameState
         _battle.InitializeDefenders();
         _battle.TeamDefender.DragAndDropSystem.gameObject.SetActive(false);
         _placeHolder.gameObject.SetActive(false);
+        _battle.WavesManager.CurrentWave.Enable();
     }
 
     private void OnSpawned(DefenderSquad defenderSquad)
     {
-        Debug.Log("OnMerged");
+        //Debug.Log("OnMerged");
         var defenders = defenderSquad.GetComponentsInChildren<Defender>();
 
         for (int i = 0; i < defenders.Length; i++)

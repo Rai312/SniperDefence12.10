@@ -6,9 +6,12 @@ using UnityEngine.AI;
 public class Enemy : Unit
 {
     [SerializeField] private ContainerFinishPoints _containerFinishPoints;
+    [SerializeField] private int _reward;
 
     private FinishPoint[] _finishPoints;
     private FinishPoint _finishPoint;
+
+    public int Reward => _reward;
 
     private void Awake()
     {

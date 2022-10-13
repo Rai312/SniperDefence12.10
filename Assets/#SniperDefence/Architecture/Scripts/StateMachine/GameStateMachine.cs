@@ -26,6 +26,7 @@ public class GameStateMachine : MonoBehaviour
     {
         _uI.OpeningMenu.StartButton.onClick.AddListener(SetPlayState);
         _uI.SniperMenu.StartButton.onClick.AddListener(SetSniperShootingState);
+        //_battle.WavesManager.
     }
 
     private void OnDisable()
@@ -46,7 +47,7 @@ public class GameStateMachine : MonoBehaviour
             [typeof(InitialState)] = new InitialState(_uI, _battle, _placeHolder),
             [typeof(OpeningState)] = new OpeningState(_uI),
             [typeof(PlayState)] = new PlayState(_uI, _placeHolder, _battle),
-            [typeof(SniperShootingState)] = new SniperShootingState(_uI, _cameraController, _sniper, _placeHolder, _battle),
+            [typeof(SniperShootingState)] = new SniperShootingState(_uI, _cameraController, _sniper, _placeHolder, _battle, _teamEnemy),
             [typeof(PauseState)] = new PauseState(_uI),
             [typeof(EndLevelState)] = new EndLevelState(_uI),
             [typeof(FailState)] = new FailState(_uI),

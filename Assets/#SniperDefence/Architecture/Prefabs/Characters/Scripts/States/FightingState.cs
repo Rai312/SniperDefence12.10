@@ -39,6 +39,10 @@ namespace UnitState
 
         public void FixedUpdate()
         {
+            if (_unit is Fighter)
+            {
+                Debug.Log("FightState");
+            }
             // if (_timeToAttack <= 0)
             // {
             //     _unit.HitTarget();

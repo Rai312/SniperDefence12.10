@@ -15232,7 +15232,7 @@ GameObject:
   - component: {fileID: -68417057429206753}
   - component: {fileID: 1258606568794194226}
   - component: {fileID: 6222217106552988356}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Zombie 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15285,7 +15285,7 @@ MonoBehaviour:
   _unitAnimator: {fileID: 6412341062519333419}
   _navMeshAgent: {fileID: 7045805807925700237}
   _hitDistance: 1.65
-  _targetDistance: 2
+  _targetDistance: 4
   _health: 200
   _damage: 30
   _deathParticle: {fileID: 0}
