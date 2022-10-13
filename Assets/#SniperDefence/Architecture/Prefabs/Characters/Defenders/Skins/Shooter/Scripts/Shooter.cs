@@ -6,14 +6,20 @@ using UnityEngine.AI;
 
 public class Shooter : Defender
 {
+    [SerializeField] private BallisticsShoot _ballisticsShoot;
     [SerializeField] private Bullet _bulletPrefab;
     [SerializeField] private Transform _shootPoint;
 
     private float _shootSpeed = 20f;
 
-    private void Shoot()
+    public BallisticsShoot BallisticsShoot => _ballisticsShoot;
+    public Bullet BulletPrefab => _bulletPrefab;
+
+    private void TakeAim()
     {
         SetTarget();
+        
+       // _ballisticsShoot.Shoot(Target.transform);
         
         Bullet bullet = Instantiate(_bulletPrefab, _shootPoint.transform.position, Quaternion.identity, null);
 
@@ -25,7 +31,7 @@ public class Shooter : Defender
 
     public override void HitTarget()
     {
-        Shoot();
+        TakeAim();
     }
 
     public override void OnTargetDied()

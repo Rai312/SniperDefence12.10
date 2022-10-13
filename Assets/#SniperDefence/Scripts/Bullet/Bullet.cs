@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 
-public class Bullet : MonoBehaviour//сделать абстрактным
+public abstract class Bullet : MonoBehaviour//сделать абстрактным
 {
-    [SerializeField] private float _movementSpeed;
+    //[SerializeField] private float _movementSpeed;
     [SerializeField] private int _damage;
 
-    private Rigidbody _rigidbody;
+    //private Rigidbody _rigidbody;
 
-    private void Awake()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
+    //private void Awake()
+    //{
+    //    _rigidbody = GetComponent<Rigidbody>();
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,8 +23,8 @@ public class Bullet : MonoBehaviour//сделать абстрактным
         }
     }
 
-    public void Move()
-    {
-        _rigidbody.AddForce(Camera.main.transform.forward * _movementSpeed, ForceMode.Impulse);
-    }
+    //public void Move()
+    //{
+    //    _rigidbody.AddForce(Camera.main.transform.forward * _movementSpeed, ForceMode.Impulse);
+    //}
 }
