@@ -5,7 +5,7 @@ public class BallisticsShoot : MonoBehaviour
 {
     [SerializeField] private float _angle;
     [SerializeField] private Transform _bulletSpawn;
-    [SerializeField] private GameObject _bullet;
+    [SerializeField] private BulletDefender _bulletPrefab;
 
 
 
@@ -22,7 +22,7 @@ public class BallisticsShoot : MonoBehaviour
 
         float speed = SpeedCulculate(target);
 
-        GameObject newBullet = Instantiate(_bullet, _bulletSpawn.position, Quaternion.identity);
+        BulletDefender newBullet = Instantiate(_bulletPrefab, _bulletSpawn.position, Quaternion.identity);
         newBullet.GetComponent<Rigidbody>().velocity = _bulletSpawn.forward * speed;
     }
 

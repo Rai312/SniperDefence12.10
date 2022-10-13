@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _angle: 30
   _bulletSpawn: {fileID: 3086007701228006277}
-  _bullet: {fileID: 833932250848440541, guid: 038bf29324138e444bbcf3014a003062, type: 3}
+  _bulletPrefab: {fileID: 5613907734362404893, guid: 038bf29324138e444bbcf3014a003062, type: 3}
 --- !u!1 &3086007701228006276
 GameObject:
   m_ObjectHideFlags: 0

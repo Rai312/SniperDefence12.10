@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class Shooter : Defender
 {
     [SerializeField] private BallisticsShoot _ballisticsShoot;
-    [SerializeField] private Bullet _bulletPrefab;
+    [SerializeField] private BulletDefender _bulletPrefab;
     [SerializeField] private Transform _shootPoint;
 
     private float _shootSpeed = 20f;
@@ -19,14 +19,14 @@ public class Shooter : Defender
     {
         SetTarget();
         
-       // _ballisticsShoot.Shoot(Target.transform);
+        _ballisticsShoot.Shoot(Target.transform);
         
-        Bullet bullet = Instantiate(_bulletPrefab, _shootPoint.transform.position, Quaternion.identity, null);
+        //Bullet bullet = Instantiate(_bulletPrefab, _shootPoint.transform.position, Quaternion.identity, null);
 
-        float distanceToTarget = Vector3.Distance(bullet.transform.position, Target.transform.position);
-        float shootTime = distanceToTarget / _shootSpeed;
+        //float distanceToTarget = Vector3.Distance(bullet.transform.position, Target.transform.position);
+        //float shootTime = distanceToTarget / _shootSpeed;
 
-        bullet.transform.DOMove(Target.transform.position, shootTime).SetEase(Ease.Linear).OnComplete(() => { bullet.gameObject.SetActive(false); });
+        //bullet.transform.DOMove(Target.transform.position, shootTime).SetEase(Ease.Linear).OnComplete(() => { bullet.gameObject.SetActive(false); });
     }
 
     public override void HitTarget()
