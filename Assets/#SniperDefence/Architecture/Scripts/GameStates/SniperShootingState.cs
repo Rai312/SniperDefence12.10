@@ -35,7 +35,7 @@ public class SniperShootingState : IGameState
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
         //for (int i = 0; i < _teamEnemy.Units.Count; i++)
         {
-            //_battle.WavesManager.CurrentWave.Units[i].Died += OnDied;
+            _battle.WavesManager.CurrentWave.Units[i].Died += OnDied;
             //Debug.Log(_battle.WavesManager.CurrentWave.Units[i]);
             //Debug.Log(_battle.WavesManager.CurrentWave);
             _battle.WavesManager.CurrentWave.Units[i].SetWaiting();
@@ -55,15 +55,25 @@ public class SniperShootingState : IGameState
         _cameraController.ActivateShowSniperRoutine();
     }
 
-    //private void OnDied()
-    //{
-    //    _bank.AddMoney
-    //}
+    private void OnDied()
+    {
+        _bank.AddMoney(5);
+    }
 
     public void Exit()
     {
         _uI.SniperMenu.Hide();
         _cameraController.PlayableDirectorFinished -= Enable;
+
+        for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
+            //for (int i = 0; i < _teamEnemy.Units.Count; i++)
+        {
+            _battle.WavesManager.CurrentWave.Units[i].Died -= OnDied;
+            //Debug.Log(_battle.WavesManager.CurrentWave.Units[i]);
+            //Debug.Log(_battle.WavesManager.CurrentWave);
+            //_battle.WavesManager.CurrentWave.Units[i].SetWaiting();
+            //_teamEnemy.Units[i].SetWaiting();
+        }
     }
 
     private void Enable()
