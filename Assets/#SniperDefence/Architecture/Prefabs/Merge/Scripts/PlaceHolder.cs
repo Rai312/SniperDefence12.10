@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlaceHolder : MonoBehaviour
 {
-  [SerializeField] private Bank _bank;
   [SerializeField] private List<Grid> _grids = new List<Grid>();
   [SerializeField] private BuyButton[] _buyButtons;
 
@@ -36,13 +35,13 @@ public class PlaceHolder : MonoBehaviour
     enabled = false;
   }
 
-  private void SpawnDefender(DefenderSquad defenderSquad,int value)
+  private void SpawnDefender(DefenderSquad defenderSquad)
   {
     int count = 0;
 
     for (int i = 0; i < _grids.Count; i++)
     {
-      if (_grids[i].IsBusy == false) //&& _bank.RemoveMoney(value))
+      if (_grids[i].IsBusy == false)
       {
         DefenderSquad newDefenderSquad = Instantiate(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
                 Debug.Log("SpawnDefender");

@@ -6,23 +6,25 @@ using UnityEngine;
 public class Bank : MonoBehaviour
 {
 
-    public int Money;
+    private int _money;
 
     public event Action MoneyChanged;
 
+    public int Money => _money;
 
     public void AddMoney(int value)
     {
-        Money += value;
+        _money += value;
         MoneyChanged?.Invoke();
     }
 
     public bool RemoveMoney(int value)
     {
-        if (Money > value)
+        if (_money > value)
         {
+            _money -= value;
+            MoneyChanged?.Invoke();
             return true;
-            Money -= value;
         }
         else
         {

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ButtonForBuyingFigther : BuyButton
 {
-    public void OnButtonClick()
+    protected override void OnButtonClick()
     {
         base.OnButtonClick();
     }
