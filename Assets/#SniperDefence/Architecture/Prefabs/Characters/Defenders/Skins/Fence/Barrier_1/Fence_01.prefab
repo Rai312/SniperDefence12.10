@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 5639407332304469746}
   - component: {fileID: 5182848595392917989}
   - component: {fileID: 4218374052587032404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fence_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.8, y: 0.875, z: 0.17}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
@@ -212,7 +212,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 7707078249798564788}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.35
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -222,6 +222,6 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.85
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
