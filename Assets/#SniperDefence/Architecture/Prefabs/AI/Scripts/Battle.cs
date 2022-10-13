@@ -86,7 +86,7 @@ public class Battle : MonoBehaviour
         bool isLoserDefenderTeam = _teamDefender.CheckLose();
         bool isLoserEnemyTeam = _wavesManager.CurrentWave.CheckLose();
 
-
+        
 
         if (isLoserDefenderTeam && isLoserEnemyTeam)
         {

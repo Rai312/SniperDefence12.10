@@ -5,12 +5,14 @@ public class PlayState : IGameState
     private readonly UI _uI;
     private readonly PlaceHolder _placeHolder;
     private readonly Battle _battle;
+    private readonly Bank _bank;
 
-    public PlayState(UI uI, PlaceHolder placeHolder, Battle battle)
+    public PlayState(UI uI, PlaceHolder placeHolder, Battle battle, Bank bank)
     {
         _uI = uI;
         _placeHolder = placeHolder;
         _battle = battle;
+        _bank = bank;
     }
 
     public void Enter()

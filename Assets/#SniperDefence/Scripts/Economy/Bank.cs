@@ -1,22 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bank : MonoBehaviour
 {
-    private int _money = 50;
+
+    public int Money;
+
+    public event Action MoneyChanged;
+
 
     public void AddMoney(int value)
     {
-        _money += value;
+        Money += value;
+        MoneyChanged?.Invoke();
     }
 
     public bool RemoveMoney(int value)
     {
-        if (_money > value)
+        if (Money > value)
         {
             return true;
-            _money -= value;
+            Money -= value;
         }
         else
         {

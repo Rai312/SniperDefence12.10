@@ -75,7 +75,7 @@ public abstract class Unit : MonoBehaviour
         TargetAssigned?.Invoke();
     }
 
-    public void Damage(int damage)
+    public virtual void Damage(int damage)
     {
         if (damage < _currentHealth)
             _currentHealth -= damage;

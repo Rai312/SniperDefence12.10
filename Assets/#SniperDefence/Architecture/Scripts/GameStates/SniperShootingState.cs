@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class SniperShootingState : IGameState
 {
@@ -8,9 +9,10 @@ public class SniperShootingState : IGameState
     private readonly PlaceHolder _placeHolder;
     private readonly Battle _battle;
     private readonly TeamEnemy _teamEnemy;
+    private readonly Bank _bank;
 
   public SniperShootingState(UI uI, CameraController cameraController,
-        Sniper sniper, PlaceHolder placeHolder, Battle battle, TeamEnemy teamEnemy)
+          Sniper sniper, PlaceHolder placeHolder, Battle battle, TeamEnemy teamEnemy, Bank bank)
     {
         _uI = uI;
         _cameraController = cameraController;
@@ -18,6 +20,7 @@ public class SniperShootingState : IGameState
         _placeHolder = placeHolder;
         _battle = battle;
         _teamEnemy = teamEnemy;
+        _bank = bank;
     }
 
     public void Enter()
@@ -28,9 +31,11 @@ public class SniperShootingState : IGameState
         _battle.InitializeEnemies();
 
 
+
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
         //for (int i = 0; i < _teamEnemy.Units.Count; i++)
         {
+            //_battle.WavesManager.CurrentWave.Units[i].Died += OnDied;
             //Debug.Log(_battle.WavesManager.CurrentWave.Units[i]);
             //Debug.Log(_battle.WavesManager.CurrentWave);
             _battle.WavesManager.CurrentWave.Units[i].SetWaiting();
@@ -49,6 +54,11 @@ public class SniperShootingState : IGameState
 
         _cameraController.ActivateShowSniperRoutine();
     }
+
+    //private void OnDied()
+    //{
+    //    _bank.AddMoney
+    //}
 
     public void Exit()
     {

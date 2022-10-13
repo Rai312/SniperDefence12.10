@@ -12,7 +12,8 @@ public class GameStateMachine : MonoBehaviour
     [SerializeField] private TeamDefender _teamDefender;
     [SerializeField] private TeamEnemy _teamEnemy;
     [SerializeField] private DragAndDropSystem _dragAndDropSystem;
-    
+    [SerializeField] private Bank _bank;
+
     private Dictionary<Type, IGameState> _statesMap;
     private IGameState _currentState;
 
@@ -44,10 +45,10 @@ public class GameStateMachine : MonoBehaviour
     {
         _statesMap = new Dictionary<Type, IGameState>
         {
-            [typeof(InitialState)] = new InitialState(_uI, _battle, _placeHolder),
+            [typeof(InitialState)] = new InitialState(_uI, _battle, _placeHolder, _bank),
             [typeof(OpeningState)] = new OpeningState(_uI),
-            [typeof(PlayState)] = new PlayState(_uI, _placeHolder, _battle),
-            [typeof(SniperShootingState)] = new SniperShootingState(_uI, _cameraController, _sniper, _placeHolder, _battle, _teamEnemy),
+            [typeof(PlayState)] = new PlayState(_uI, _placeHolder, _battle, _bank),
+            [typeof(SniperShootingState)] = new SniperShootingState(_uI, _cameraController, _sniper, _placeHolder, _battle, _teamEnemy, _bank),
             [typeof(PauseState)] = new PauseState(_uI),
             [typeof(EndLevelState)] = new EndLevelState(_uI),
             [typeof(FailState)] = new FailState(_uI),

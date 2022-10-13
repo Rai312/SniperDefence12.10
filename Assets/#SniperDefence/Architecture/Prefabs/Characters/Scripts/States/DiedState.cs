@@ -13,7 +13,7 @@ namespace UnitState
 
         public void Enter()
         {
-            if (_unit is Unit)
+            if (_unit is Enemy)
             {
                 //Debug.Log("DieState - Enter" + this);
             }
