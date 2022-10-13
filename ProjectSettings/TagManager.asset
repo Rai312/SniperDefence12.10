@@ -10,19 +10,19 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
+  - EnemyRagdoll
+  - Defender
+  - DefenderRagdoll
   - Terrain
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Triggers
+  - Bullet
+  - NavMeshIgnore
+  - Grid
+  - Ground
+  - dassdasd
   - 
   - 
   - 
