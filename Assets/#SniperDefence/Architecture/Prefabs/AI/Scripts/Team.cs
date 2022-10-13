@@ -10,7 +10,6 @@ public abstract class Team : MonoBehaviour
 
     public TeamContainer TeamContainer => _teamContainer;
 
-
     public IReadOnlyList<Unit> Units => _units;
     public bool IsAlive { get; private set; } = true;
     
