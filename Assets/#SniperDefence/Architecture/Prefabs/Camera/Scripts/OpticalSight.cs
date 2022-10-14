@@ -50,7 +50,6 @@ public class OpticalSight : MonoBehaviour
         _targetZoom = _maximuFov - _startZoom;
         _fieldFovAnimation = _camera.DOFieldOfView(_targetZoom, _duration);
       }
-      print(Input.GetMouseButton(0));
       if (/*touch.phase == TouchPhase.Ended||*/ Input.GetMouseButtonUp(0))
       {
           if (_canShoot && _isWork)
