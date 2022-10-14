@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/#SniperDefence/Scenes/DanilScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/#SniperDefence/Scenes/SampleScene 1.unity
+    guid: 9975c4121d824d246848b32d4ea1a8c9
   m_configObjects: {}
