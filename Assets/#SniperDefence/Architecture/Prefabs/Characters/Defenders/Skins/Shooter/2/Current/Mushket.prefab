@@ -1734,6 +1734,7 @@ GameObject:
   - component: {fileID: 4600020658817600189}
   - component: {fileID: 914995939873972118}
   - component: {fileID: 1455427671377791512}
+  - component: {fileID: 8587172389918561126}
   m_Layer: 7
   m_Name: Mushket
   m_TagString: Untagged
@@ -1790,6 +1791,7 @@ MonoBehaviour:
   _health: 100
   _damage: 30
   _deathParticle: {fileID: 0}
+  _ballisticsShoot: {fileID: 8587172389918561126}
   _bulletPrefab: {fileID: 517875665828562528, guid: f1d2b911fdad5994895b579dc470d247, type: 3}
   _shootPoint: {fileID: 6629748988178341153}
 --- !u!195 &1455427671377791512
@@ -1814,6 +1816,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8587172389918561126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8764840816547400415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548464a240009a3418dd08018336c2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _angle: 5
+  _bulletSpawn: {fileID: 6629748988178341153}
+  _bulletPrefab: {fileID: 3266070200127299691, guid: 47e977860053c2f4d9b1bedb5a34b841, type: 3}
+  _speedMultyplaer: 2
 --- !u!1001 &283330933892229313
 PrefabInstance:
   m_ObjectHideFlags: 0

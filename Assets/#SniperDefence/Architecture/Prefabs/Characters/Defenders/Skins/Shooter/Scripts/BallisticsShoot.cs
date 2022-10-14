@@ -6,9 +6,8 @@ public class BallisticsShoot : MonoBehaviour
     [SerializeField] private float _angle;
     [SerializeField] private Transform _bulletSpawn;
     [SerializeField] private BulletDefender _bulletPrefab;
-
-
-
+    [SerializeField] private float _speedMultyplaer;
+    
     private float _gravityForce = Physics.gravity.y;
 
     private void Start()
@@ -34,7 +33,7 @@ public class BallisticsShoot : MonoBehaviour
         float directionY = direction.y;
 
         float speed2 = (_gravityForce * distanse * distanse) / (2 * (directionY - Mathf.Tan(_angle) * distanse) * Mathf.Pow(Mathf.Cos(_angle), 2));
-        float speed = Mathf.Sqrt(Mathf.Abs(speed2));
+        float speed = Mathf.Sqrt(Mathf.Abs(speed2)) * _speedMultyplaer;
 
         return speed;
     }

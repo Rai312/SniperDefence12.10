@@ -28,27 +28,27 @@ public class DragAndDropSystem : MonoBehaviour
   {
     RaycastHit hit;
 
-    if (Input.touchCount > 0)
-    {
-      Touch touch = Input.GetTouch(0);
+    //if (Input.touchCount > 0)
+    //{
+      //Touch touch = Input.GetTouch(0);
 
-      Ray ray = Camera.main.ScreenPointToRay(touch.position);
+      Ray ray = Camera.main.ScreenPointToRay(/*touch.position*/Input.mousePosition);
 
       if (Physics.Raycast(ray, out hit, _rayDistance, _gridLayerMask))
         GetInfoAboutGrid(hit);
 
-      if (touch.phase == TouchPhase.Moved && _isDrag)
+      if (/*touch.phase == TouchPhase.Moved*/ Input.GetMouseButton(0) && _isDrag)
       {
         _activeGrid.ChangeColor(_activeGridColor);
         StartDrag(ray);
       }
 
-      if (touch.phase == TouchPhase.Ended && _isDrag || touch.phase == TouchPhase.Canceled && _isDrag)
+      if (/*touch.phase == TouchPhase.Ended && _isDrag || touch.phase == TouchPhase.Canceled*/ Input.GetMouseButtonUp(0) && _isDrag)
       {
         _activeGrid.ChangeColor(_inactiveGridColor);
         StopDrag(ray);
       }
-    }
+   // }
   }
 
   private void StopDrag(Ray ray)
