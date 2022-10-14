@@ -52,3 +52,4 @@ MonoBehaviour:
   _teamDefender: {fileID: 0}
   _teamEnemy: {fileID: 0}
   _dragAndDropSystem: {fileID: 0}
+  _bank: {fileID: 0}
