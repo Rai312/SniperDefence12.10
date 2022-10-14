@@ -8,7 +8,7 @@ public class Defender : Unit
 
   private void Awake()
   {
-        SetFinishTarget();
+       // SetFinishTarget();
         _navmeshAgent = GetComponent<NavMeshAgent>();
   }
 

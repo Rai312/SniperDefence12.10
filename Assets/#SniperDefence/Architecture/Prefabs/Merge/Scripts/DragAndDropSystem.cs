@@ -28,8 +28,8 @@ public class DragAndDropSystem : MonoBehaviour
   {
     RaycastHit hit;
 
-    //if (Input.touchCount > 0)
-    //{
+      //if (Input.GetMouseButton(0))
+   // {
       //Touch touch = Input.GetTouch(0);
 
       Ray ray = Camera.main.ScreenPointToRay(/*touch.position*/Input.mousePosition);
@@ -48,7 +48,7 @@ public class DragAndDropSystem : MonoBehaviour
         _activeGrid.ChangeColor(_inactiveGridColor);
         StopDrag(ray);
       }
-   // }
+  //  }
   }
 
   private void StopDrag(Ray ray)
