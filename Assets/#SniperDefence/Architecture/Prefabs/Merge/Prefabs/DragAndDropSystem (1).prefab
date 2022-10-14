@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2136277890591711356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136277890591711346}
+  - component: {fileID: 2136277890591711357}
+  m_Layer: 0
+  m_Name: DefenderFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136277890591711346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136277890591711356}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.0057735, y: -26.006992, z: 37.78846}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2136277889732056911}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136277890591711357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136277890591711356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b6a32eda4fa2145898481fe0164252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shootingMap:
+    items:
+    - <Key>k__BackingField: 2
+      <Value>k__BackingField: {fileID: 4757548319383925268, guid: af118c43239184e4f9c0276a66a110af, type: 3}
+    - <Key>k__BackingField: 3
+      <Value>k__BackingField: {fileID: 4757548319383925268, guid: af118c43239184e4f9c0276a66a110af, type: 3}
+    - <Key>k__BackingField: 4
+      <Value>k__BackingField: {fileID: 4757548319383925268, guid: af118c43239184e4f9c0276a66a110af, type: 3}
+    - <Key>k__BackingField: 5
+      <Value>k__BackingField: {fileID: 4757548319383925268, guid: af118c43239184e4f9c0276a66a110af, type: 3}
+    - <Key>k__BackingField: 6
+      <Value>k__BackingField: {fileID: 4757548319383925268, guid: af118c43239184e4f9c0276a66a110af, type: 3}
+  _fighterMap:
+    items:
+    - <Key>k__BackingField: 2
+      <Value>k__BackingField: {fileID: 3107874735435013980, guid: 8342fa2f64b78e949828c7fe62cb20cb, type: 3}
+    - <Key>k__BackingField: 3
+      <Value>k__BackingField: {fileID: 3107874735435013980, guid: 8342fa2f64b78e949828c7fe62cb20cb, type: 3}
+    - <Key>k__BackingField: 4
+      <Value>k__BackingField: {fileID: 3107874735435013980, guid: 8342fa2f64b78e949828c7fe62cb20cb, type: 3}
+    - <Key>k__BackingField: 5
+      <Value>k__BackingField: {fileID: 3107874735435013980, guid: 8342fa2f64b78e949828c7fe62cb20cb, type: 3}
+    - <Key>k__BackingField: 6
+      <Value>k__BackingField: {fileID: 3107874735435013980, guid: 8342fa2f64b78e949828c7fe62cb20cb, type: 3}
+--- !u!1 &2136277891158799469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2136277889732056911}
+  - component: {fileID: 2136277889732056910}
+  m_Layer: 0
+  m_Name: DragAndDropSystem (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2136277889732056911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136277891158799469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2136277890591711346}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136277889732056910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136277891158799469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c11efe71c2e1c458114df48987dc47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gridLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  _groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _defenderFactory: {fileID: 2136277890591711357}
+  _activeGridColor: {r: 0.383329, g: 1, b: 0.33490568, a: 1}
+  _inactiveGridColor: {r: 1, g: 1, b: 1, a: 1}
