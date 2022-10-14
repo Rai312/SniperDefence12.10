@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public abstract class Unit : MonoBehaviour
 {
+    //[SerializeField] private ContainerFinishPoints _containerFinishPoints;
     [SerializeField] private UnitAnimator _unitAnimator;
     [SerializeField] private NavMeshAgent _navMeshAgent;
     [SerializeField] private float _hitDistance;
@@ -18,6 +19,10 @@ public abstract class Unit : MonoBehaviour
     private IReadOnlyList<Unit> _targets;
     private Unit _target;
 
+    //private FinishPoint[] _finishPoints;
+    //private FinishPoint _finishPoint;
+
+    //public ContainerFinishPoints ContainerFinishPoints => _containerFinishPoints;
     public bool IsAlive { get; private set; }
     public float HitDistance => _hitDistance;
     public ParticleSystem DeathParticle => _deathParticle;
@@ -34,6 +39,7 @@ public abstract class Unit : MonoBehaviour
 
     public void Initialize(IReadOnlyList<Unit> enemies)
     {
+        //SetFinishTarget();
         if (enemies == null)
             throw new ArgumentNullException("Unit is not initialized by enemies.");
         _currentHealth = _health;
@@ -61,6 +67,19 @@ public abstract class Unit : MonoBehaviour
     //        }
 
     //    }
+    //}
+
+    //public void SetFinishTarget()
+    //{
+    //    _finishPoints = _containerFinishPoints.GetComponentsInChildren<FinishPoint>();
+    //    int randomIndex = UnityEngine.Random.Range(0, _finishPoints.Length);
+    //    //Debug.Log(randomIndex);
+    //    _finishPoint = _finishPoints[randomIndex];
+    //}
+
+    //public void MoveToFinish()
+    //{
+    //    _navMeshAgent.SetDestination(_finishPoint.transform.position);
     //}
 
     public void SetTarget()

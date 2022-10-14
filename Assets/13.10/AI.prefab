@@ -573,10 +573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1489712d51f11347a9ec90ea52e49f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _units:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  _units: []
   _teamContainer: {fileID: 8003390922694205007}
   _dragAndDropSystem: {fileID: 0}
 --- !u!1 &6897354758587914744

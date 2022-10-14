@@ -1,58 +1,73 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class PlaceHolder : MonoBehaviour
 {
-  [SerializeField] private List<Grid> _grids = new List<Grid>();
-  [SerializeField] private BuyButton[] _buyButtons;
+    [SerializeField] private List<Grid> _grids = new List<Grid>();
+    [SerializeField] private BuyButton[] _buyButtons;
 
-  public event Action<DefenderSquad> Spawned;
-  
-  private void OnEnable()
-  {
-    for (int i = 0; i < _buyButtons.Length; i++)
+    private DiContainer _diContainer;
+
+    [Inject]
+    private void Constructor(DiContainer diContainer)
     {
-      _buyButtons[i].ButtonClick += SpawnDefender;
+        _diContainer = diContainer;
     }
-  }
 
-  private void OnDisable()
-  {
-    for (int i = 0; i < _buyButtons.Length; i++)
+    public event Action<DefenderSquad> Spawned;
+
+    private void OnEnable()
     {
-      _buyButtons[i].ButtonClick -= SpawnDefender;
+        for (int i = 0; i < _buyButtons.Length; i++)
+        {
+            _buyButtons[i].ButtonClick += SpawnDefender;
+        }
     }
-  }
-  
-  public void Enable()
-  {
-    enabled = true;
-  }
 
-  public void Disable()
-  {
-    enabled = false;
-  }
-
-  private void SpawnDefender(DefenderSquad defenderSquad)
-  {
-    int count = 0;
-
-    for (int i = 0; i < _grids.Count; i++)
+    private void OnDisable()
     {
-      if (_grids[i].IsBusy == false)
-      {
-        DefenderSquad newDefenderSquad = Instantiate(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
+        for (int i = 0; i < _buyButtons.Length; i++)
+        {
+            _buyButtons[i].ButtonClick -= SpawnDefender;
+        }
+    }
+
+    public void Enable()
+    {
+        enabled = true;
+    }
+
+    public void Disable()
+    {
+        enabled = false;
+    }
+
+    private void SpawnDefender(DefenderSquad defenderSquad)
+    {
+        //var defenders = defenderSquad.GetComponentsInChildren<Defender>();
+        int count = 0;
+
+        for (int i = 0; i < _grids.Count; i++)
+        {
+            if (_grids[i].IsBusy == false)
+            {
+                //for (int j = 0; j < defenders.Length; j++)
+                //{
+                //    defenders[i]
+                //}
+                DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
+        //DefenderSquad newDefenderSquad = Instantiate(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
                 Debug.Log("SpawnDefender");
-        Spawned?.Invoke(newDefenderSquad); 
-        _grids[i].AddDefenderSquad(newDefenderSquad);
-        _grids[i].MakeIsBusy();
-        count++;
-      }
+                Spawned?.Invoke(newDefenderSquad);
+                _grids[i].AddDefenderSquad(newDefenderSquad);
+                _grids[i].MakeIsBusy();
+                count++;
+            }
 
-      if (count == 1)
-        break;
+            if (count == 1)
+                break;
+        }
     }
-  }
 }
