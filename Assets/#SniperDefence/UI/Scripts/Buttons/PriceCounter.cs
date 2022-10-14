@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PriceCounter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private BuyButton _buyButton;
+    [SerializeField] private TMP_Text _tmpText;
+
+    private void OnEnable()
     {
-        
+        _buyButton.PriceChange += DrawPrice;
+        DrawPrice(_buyButton.Price);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        _buyButton.PriceChange -= DrawPrice;
+    }
+
+    private void DrawPrice(int price)
+    {
+        _tmpText.text = price.ToString();
     }
 }

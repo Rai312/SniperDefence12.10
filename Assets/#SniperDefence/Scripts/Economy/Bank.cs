@@ -20,7 +20,7 @@ public class Bank : MonoBehaviour
 
     public bool RemoveMoney(int value)
     {
-        if (_money > value)
+        if (_money >= value)
         {
             _money -= value;
             MoneyChanged?.Invoke();
