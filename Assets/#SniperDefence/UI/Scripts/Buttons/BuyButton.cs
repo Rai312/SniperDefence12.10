@@ -11,6 +11,8 @@ public abstract class BuyButton : MonoBehaviour
 
   public event Action<DefenderSquad> ButtonClick;
 
+  public int Price => _price;
+
   protected virtual void OnButtonClick()
   {
       if (_bank.RemoveMoney(_price))

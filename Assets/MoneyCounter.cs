@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MoneyCounter : MonoBehaviour
@@ -12,7 +9,7 @@ public class MoneyCounter : MonoBehaviour
     private void OnEnable()
     {
         _bank.MoneyChanged += DrawMoney;
-        
+        DrawMoney();
     }
 
     private void OnDisable()

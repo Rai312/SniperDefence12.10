@@ -9,6 +9,6 @@ public class BulletDefender : Bullet
 
     private void Update()
     {
-        transform.LookAt(_rigidbody.velocity);
+        transform.forward = _rigidbody.velocity;
     }
 }
