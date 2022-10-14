@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095504913182936444}
   - component: {fileID: 4095504913182936445}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: dottedFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,8 @@ GameObject:
   - component: {fileID: 4095504913671289376}
   - component: {fileID: 271902764}
   - component: {fileID: 5604876723798037615}
-  m_Layer: 14
+  - component: {fileID: 6387710800337308592}
+  m_Layer: 13
   m_Name: Point3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,6 +145,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ff812ef152c346a889678eadc90c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6387710800337308592
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095504913671289382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.52, y: 1, z: 1.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4095504913924946900
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095504913924946901}
   - component: {fileID: 4095504913924946902}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: dottedFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095504913956114371}
   - component: {fileID: 4095504913956114396}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: dottedFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -322,7 +336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095504913990876879}
   - component: {fileID: 4095504913990876872}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: dottedFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +421,8 @@ GameObject:
   - component: {fileID: 4095504914084900058}
   - component: {fileID: 591143981}
   - component: {fileID: 7443183491350686091}
-  m_Layer: 14
+  - component: {fileID: 6387710800588490673}
+  m_Layer: 13
   m_Name: Point4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -456,6 +471,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ff812ef152c346a889678eadc90c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6387710800588490673
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095504914084900056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.52, y: 1, z: 1.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4095504914181544036
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +495,8 @@ GameObject:
   - component: {fileID: 4095504914181544038}
   - component: {fileID: 727806903}
   - component: {fileID: 2985453178542766519}
-  m_Layer: 14
+  - component: {fileID: 6387710800460353579}
+  m_Layer: 13
   m_Name: Point5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,6 +545,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ff812ef152c346a889678eadc90c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6387710800460353579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095504914181544036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.52, y: 1, z: 1.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4095504914247329313
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,7 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095504914247329314}
   - component: {fileID: 4095504914247329315}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: dottedFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +653,8 @@ GameObject:
   - component: {fileID: 4095504914247925780}
   - component: {fileID: 751424188}
   - component: {fileID: 1975378201390234757}
-  m_Layer: 14
+  - component: {fileID: 6387710800419959072}
+  m_Layer: 13
   m_Name: Point2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -660,6 +703,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ff812ef152c346a889678eadc90c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6387710800419959072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095504914247925786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.52, y: 1, z: 1.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4095504914464711723
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095504914464711716}
   - component: {fileID: 4095504914464711717}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: dottedFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +811,8 @@ GameObject:
   - component: {fileID: 4095504914854055118}
   - component: {fileID: 1717248134}
   - component: {fileID: 1446341232705868424}
-  m_Layer: 14
+  - component: {fileID: 6387710801585095450}
+  m_Layer: 13
   m_Name: Point6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,6 +861,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ff812ef152c346a889678eadc90c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6387710801585095450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095504914854055116}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.52, y: 1, z: 1.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4095504915042912718
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +885,8 @@ GameObject:
   - component: {fileID: 4095504915042912712}
   - component: {fileID: 1830761211}
   - component: {fileID: 4372127405337387089}
-  m_Layer: 14
+  - component: {fileID: 6387710801496756583}
+  m_Layer: 13
   m_Name: Point1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -864,6 +935,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ff812ef152c346a889678eadc90c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &6387710801496756583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095504915042912718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.52, y: 1, z: 1.35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4095504915120740751
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +1005,10 @@ MonoBehaviour:
   - {fileID: 7443183491350686091}
   - {fileID: 2985453178542766519}
   - {fileID: 1446341232705868424}
-  _buyButtons: []
+  _buyButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &4095504913133244576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -929,9 +1016,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4095504914247925780}
     m_Modifications:
+    - target: {fileID: 110668, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_Name
       value: DustDirtyPoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424984, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_RootOrder
@@ -991,9 +1086,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4095504913671289376}
     m_Modifications:
+    - target: {fileID: 110668, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_Name
       value: DustDirtyPoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424984, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_RootOrder
@@ -1053,9 +1156,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4095504915042912712}
     m_Modifications:
+    - target: {fileID: 110668, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_Name
       value: DustDirtyPoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424984, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_RootOrder
@@ -1115,9 +1226,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4095504914854055118}
     m_Modifications:
+    - target: {fileID: 110668, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_Name
       value: DustDirtyPoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424984, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_RootOrder
@@ -1177,9 +1296,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4095504914181544038}
     m_Modifications:
+    - target: {fileID: 110668, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_Name
       value: DustDirtyPoof (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424984, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_RootOrder
@@ -1239,9 +1366,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4095504914084900058}
     m_Modifications:
+    - target: {fileID: 110668, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_Name
       value: DustDirtyPoof
+      objectReference: {fileID: 0}
+    - target: {fileID: 187952, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 424984, guid: c05e92eaee7a00844867e5edc8e0dde1, type: 3}
       propertyPath: m_RootOrder
