@@ -46,6 +46,7 @@ public class SniperShootingState : IGameState
 
         _uI.SniperMenu.Show();
         _cameraController.ActivateShowSniperRoutine();
+        _cameraController.CameraMove.PlayAnimation();
     }
 
     private void OnDied()
@@ -69,6 +70,7 @@ public class SniperShootingState : IGameState
 
     private void Enable()
     {
+        _cameraController.CameraMove.Activate();
         _cameraController.CameraRotator.enabled = true;
         _uI.SniperMenu.OpticalSight.enabled = true;
     }

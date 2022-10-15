@@ -36,12 +36,7 @@ public class CameraRotator : MonoBehaviour
 
     private void GetTouch()
     {
-
-       // if (Input.touchCount > 0 || Input.GetMouseButton(0))
-        //{
-           // Touch touch = Input.GetTouch(1);
-
-            if (/*touch.phase == TouchPhase.Began ||*/ Input.GetMouseButtonDown(0) )
+            if (Input.GetMouseButtonDown(0) )
             {
                 _isToched = true;
                 _firstPoint = Input.mousePosition;
@@ -49,20 +44,19 @@ public class CameraRotator : MonoBehaviour
                 _tempXrotation = _xRotation;
             }
 
-            if (/*touch.phase == TouchPhase.Moved ||*/ Input.GetMouseButton(0))
+            if ( Input.GetMouseButton(0))
             {
                 _secondPoint = Input.mousePosition;
                 _yRotation = (_tempYrotation + (_secondPoint.x - _firstPoint.x) * _sensitivity / Screen.width);
                 _xRotation = (_tempXrotation + (_secondPoint.y - _firstPoint.y) * _sensitivity / Screen.width);
             }
 
-            if (/*touch.phase == TouchPhase.Ended ||*/ Input.GetMouseButtonUp(0) )
+            if (Input.GetMouseButtonUp(0) )
             {
                 _tempYrotation = _yRotation;
                 _tempXrotation = _xRotation;
                 _isToched = false;
             }
-      //  }
     }
 
     private void Turn()
@@ -72,7 +66,7 @@ public class CameraRotator : MonoBehaviour
         if (_isStartZoom == true)
         {
             _xRotation = -_xStartRotation;
-            _yRotation = -_yStartRotation;
+            _yRotation = _yStartRotation;
             _isStartZoom = false;
         }
 
