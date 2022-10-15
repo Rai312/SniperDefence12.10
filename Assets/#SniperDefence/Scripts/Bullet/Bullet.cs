@@ -19,7 +19,7 @@ public abstract class Bullet : MonoBehaviour//сделать абстрактн�
             //Debug.Log(enemy.name);
             //enemy.gameObject.SetActive(false);
             enemy.Damage(_damage);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

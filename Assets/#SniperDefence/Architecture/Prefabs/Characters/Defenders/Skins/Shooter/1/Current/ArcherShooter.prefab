@@ -96,10 +96,11 @@ MonoBehaviour:
   _unitAnimator: {fileID: 9099798875290696668}
   _navMeshAgent: {fileID: 3086007700267337100}
   _hitDistance: 20
-  _targetDistance: 20
+  _targetDistance: 50
   _health: 30
   _damage: 120
   _deathParticle: {fileID: 0}
+  _containerFinsihPointsDefender: {fileID: 0}
   _ballisticsShoot: {fileID: 7938799182654252590}
   _bulletPrefab: {fileID: 517875665828562528, guid: ae55f84487b2eef48aa22a0b359fd991, type: 3}
   _shootPoint: {fileID: 3086007701228006277}
@@ -141,6 +142,8 @@ MonoBehaviour:
   _bulletSpawn: {fileID: 3086007701228006277}
   _bulletPrefab: {fileID: 5613907734362404893, guid: 038bf29324138e444bbcf3014a003062, type: 3}
   _speedMultyplaer: 1
+  _bulletCount: 8
+  _BulletPoolConteiner: {fileID: 0}
 --- !u!1 &3086007701228006276
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 //using InfinityCode.UltimateEditorEnhancer.Windows;
 using UnityEngine;
+using Zenject;
 
 public class BallisticsShoot : MonoBehaviour
 {
@@ -7,22 +8,33 @@ public class BallisticsShoot : MonoBehaviour
     [SerializeField] private Transform _bulletSpawn;
     [SerializeField] private BulletDefender _bulletPrefab;
     [SerializeField] private float _speedMultyplaer;
+    [SerializeField] private int _bulletCount;
     
+    [Inject]
+    private Transform _BulletPoolConteiner;
+
+    private ObjectPool<BulletDefender> _bulletPool;
+
     private float _gravityForce = Physics.gravity.y;
 
     private void Start()
     {
+        _bulletPool = new ObjectPool<BulletDefender>(_bulletPrefab, _bulletCount, _BulletPoolConteiner);
         _bulletSpawn.localEulerAngles = new Vector3(-_angle, 0f, 0f);
         _angle = _angle * Mathf.PI / 180;
     }
 
     public void Shoot(Transform target)
     {
-
-        float speed = SpeedCulculate(target);
-
-        BulletDefender newBullet = Instantiate(_bulletPrefab, _bulletSpawn.position, Quaternion.identity);
-        newBullet.GetComponent<Rigidbody>().velocity = _bulletSpawn.forward * speed;
+        if (_bulletPool.TryGetObject(out BulletDefender newBullet))
+        {
+            print("Shoot1");
+            float speed = SpeedCulculate(target);
+            newBullet.transform.position = _bulletSpawn.position;
+            newBullet.gameObject.SetActive(true);
+            newBullet.GetComponent<Rigidbody>().velocity = _bulletSpawn.forward * speed;
+            print("Shoot2");
+        }
     }
 
     private float SpeedCulculate(Transform target)

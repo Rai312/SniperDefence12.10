@@ -1787,10 +1787,11 @@ MonoBehaviour:
   _unitAnimator: {fileID: 2101853251416802361}
   _navMeshAgent: {fileID: 1455427671377791512}
   _hitDistance: 20
-  _targetDistance: 20
+  _targetDistance: 50
   _health: 100
   _damage: 30
   _deathParticle: {fileID: 0}
+  _containerFinsihPointsDefender: {fileID: 0}
   _ballisticsShoot: {fileID: 8587172389918561126}
   _bulletPrefab: {fileID: 517875665828562528, guid: f1d2b911fdad5994895b579dc470d247, type: 3}
   _shootPoint: {fileID: 6629748988178341153}
