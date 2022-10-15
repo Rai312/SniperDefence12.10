@@ -1093,6 +1093,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  _checkPoints: {fileID: 0}
 --- !u!1001 &4095504913133244576
 PrefabInstance:
   m_ObjectHideFlags: 0

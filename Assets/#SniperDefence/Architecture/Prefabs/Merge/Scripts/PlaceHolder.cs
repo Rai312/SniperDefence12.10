@@ -7,17 +7,19 @@ public class PlaceHolder : MonoBehaviour
 {
     [SerializeField] private List<Grid> _grids = new List<Grid>();
     [SerializeField] private BuyButton[] _buyButtons;
-    [SerializeField] private CheckPoint _checkPoint;
+    //[SerializeField] private CheckPoint _checkPoint;
+    [SerializeField] private List<CheckPoint> _checkPoints;
 
     private DiContainer _diContainer;
+    //private List<CheckPoint> _
 
     public event Action<DefenderSquad> Spawned;
 
     [Inject]
-    private void Constructor(DiContainer diContainer, CheckPoint checkPoint)
+    private void Constructor(DiContainer diContainer, List<CheckPoint> checkPoint)
     {
         _diContainer = diContainer;
-        _checkPoint = checkPoint;
+        _checkPoints = checkPoint;
     }
 
     private void OnEnable()
@@ -36,6 +38,11 @@ public class PlaceHolder : MonoBehaviour
         }
     }
 
+    public void Initialize()
+    {
+        
+    }
+
     public void Enable()
     {
         enabled = true;
@@ -48,7 +55,7 @@ public class PlaceHolder : MonoBehaviour
 
     public void ChangePosition()
     {
-        transform.position = _checkPoint.transform.position;
+        //transform.position = _checkPoints.transform.position;
     }
 
     private void SpawnDefender(DefenderSquad defenderSquad)
