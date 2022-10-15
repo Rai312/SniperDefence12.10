@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -6,17 +7,19 @@ using UnityEngine.Playables;
 public class CameraMove : MonoBehaviour
 {
     [SerializeField] private PlayableDirector _playableDirector;
-    [SerializeField] private List<Transform> _path;
 
     private int _pathPointIndex = 0;
-    
-    private void Update()
+
+    // private void Update()
+    // {
+    //     if (Input.GetMouseButton(1)) 
+    //         PlayAnimation();
+    // }
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (_playableDirector. == _path[_pathPointIndex].position)
-        {
+        if (other.gameObject.TryGetComponent(out PlayablePaused paused))
             PausedAnimation();
-            _pathPointIndex ++;
-        }
     }
 
     public void Activate()
