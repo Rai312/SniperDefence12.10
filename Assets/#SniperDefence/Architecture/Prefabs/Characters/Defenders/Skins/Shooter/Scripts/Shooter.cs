@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
-using UnityEngine.AI;
 
 public class Shooter : Defender
 {
@@ -10,7 +6,7 @@ public class Shooter : Defender
     [SerializeField] private BulletDefender _bulletPrefab;
     [SerializeField] private Transform _shootPoint;
 
-    private float _shootSpeed = 20f;
+    //private float _shootSpeed = 20f;
 
     public BallisticsShoot BallisticsShoot => _ballisticsShoot;
     public Bullet BulletPrefab => _bulletPrefab;
@@ -41,6 +37,5 @@ public class Shooter : Defender
     public override void OnTargetDied()
     {
         Target.Died -= OnTargetDied;
-        //SetTarget();
     }
 }

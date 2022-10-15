@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace UnitState
 {
     public class WaitingState : IUnitState
@@ -13,10 +11,6 @@ namespace UnitState
 
         public void Enter()
         {
-            if (_unit is Enemy)
-            {
-                //Debug.Log("WaitingState - Enter - " + _unit);
-            }
             _unit.UnitAnimator.ShowIdle();
             if (_unit is Enemy)
             {
@@ -28,20 +22,11 @@ namespace UnitState
 
         public void Exit()
         {
-            if (_unit is Enemy)
-            {
-                //Debug.Log("WaitingState - Exit - " + _unit);
-            }
             _unit.UnitAnimator.ResetTrigger();
         }
 
         public void FixedUpdate()
         {
-            if (_unit is Fighter)
-            {
-                //Debug.Log("WaitingState");
-            }
-
             _unit.CheckDistanceToEnemy();
         }
     }

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public abstract class BuyButton : MonoBehaviour
 {
-  // [field: SerializeField] public Defender DefenderPrefab { get; private set; }
   [field: SerializeField] public DefenderSquad DefenderSquad { get; private set; }
   [SerializeField] private int _price;
   [SerializeField] private float _recalculate;

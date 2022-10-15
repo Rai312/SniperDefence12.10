@@ -26,12 +26,10 @@ public abstract class Team : MonoBehaviour
 
     public void RemoveDefendersMerge(DefenderSquad[] defenderSquads)
     {
-        // тут надо удалить дефендеров
         if (this is TeamDefender)
         {
             for (int i = 0; i < defenderSquads.Length; i++)
             {
-                //var defenders = defenderSquat[i].GetComponentsInChildren<Defender>();
                 var defenders = defenderSquads[i].GetComponentsInChildren<Defender>();
                 for (int j = 0; j < defenders.Length; j++)
                 {

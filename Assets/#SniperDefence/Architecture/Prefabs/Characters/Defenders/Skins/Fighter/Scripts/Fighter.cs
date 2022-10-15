@@ -1,7 +1,1 @@
-using UnityEngine;
-using UnityEngine.AI;
-
-public class Fighter : Defender
-{
-
-}
+public class Fighter : Defender { }

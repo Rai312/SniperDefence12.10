@@ -551,7 +551,7 @@ SkinnedMeshRenderer:
   m_GameObject: {fileID: 4437478321604984654}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -15290,6 +15290,7 @@ MonoBehaviour:
   _damage: 30
   _deathParticle: {fileID: 0}
   _containerFinishPoints: {fileID: 0}
+  _reward: 0
 --- !u!195 &7045805807925700237
 NavMeshAgent:
   m_ObjectHideFlags: 0

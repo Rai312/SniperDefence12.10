@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Battle : MonoBehaviour
 {
@@ -51,16 +49,11 @@ public class Battle : MonoBehaviour
     {
         foreach (var unit in _wavesManager.CurrentWave.Units)
         {
-            //for (int i = 0; i < _wavesManager.CurrentWave.Units.Count; i++)
-            //{
-            //    Debug.Log(_teamDefender.Units[i]);
-            //}
 
             unit.Initialize(_teamDefender.Units);
             //unit.Died += CheckWin;
             unit.Died += CheckWinDefenders;
         }
-        //_wavesManager.CurrentWave.Units[1].DebugTargets();
     }
 
     private void CheckWinDefenders()
@@ -70,7 +63,7 @@ public class Battle : MonoBehaviour
         {
             DefenderWon?.Invoke();
             Debug.Log("isLoserEnemyTeam");
-            _wavesManager.ChangeWave();
+            //_wavesManager.ChangeWave();
         }
     }
 
@@ -83,40 +76,40 @@ public class Battle : MonoBehaviour
         }
     }
 
-    private void CheckWin()
-    {
-        bool isLoserDefenderTeam = _teamDefender.CheckLose();
-        bool isLoserEnemyTeam = _wavesManager.CurrentWave.CheckLose();
+    //private void CheckWin()
+    //{
+    //    bool isLoserDefenderTeam = _teamDefender.CheckLose();
+    //    bool isLoserEnemyTeam = _wavesManager.CurrentWave.CheckLose();
 
         
 
-        if (isLoserDefenderTeam && isLoserEnemyTeam)
-        {
-            Debug.Log("isLoserDefenderTeam");
-        }
-        else
-        {
-            if (isLoserDefenderTeam)
-            {
-                Debug.Log("isLoserDefenderTeam");
-            }
-            else if (isLoserEnemyTeam)
-            {
-                Debug.Log("isLoserEnemyTeam");
-            }
-        }
+    //    if (isLoserDefenderTeam && isLoserEnemyTeam)
+    //    {
+    //        Debug.Log("isLoserDefenderTeam");
+    //    }
+    //    else
+    //    {
+    //        if (isLoserDefenderTeam)
+    //        {
+    //            Debug.Log("isLoserDefenderTeam");
+    //        }
+    //        else if (isLoserEnemyTeam)
+    //        {
+    //            Debug.Log("isLoserEnemyTeam");
+    //        }
+    //    }
 
-        //Debug.Log("CheckWin");
-        //if (firstTeamResult && secondTeamResult)
-        //{
-        //    _drawMessage.gameObject.SetActive(true);
-        //}
-        //else
-        //{
-        //    if (firstTeamResult)
-        //        _secondTeamWinText.gameObject.SetActive(true);
-        //    if (secondTeamResult)
-        //        _firstTeamWinText.gameObject.SetActive(true);
-        //}
-    }
+    //    //Debug.Log("CheckWin");
+    //    //if (firstTeamResult && secondTeamResult)
+    //    //{
+    //    //    _drawMessage.gameObject.SetActive(true);
+    //    //}
+    //    //else
+    //    //{
+    //    //    if (firstTeamResult)
+    //    //        _secondTeamWinText.gameObject.SetActive(true);
+    //    //    if (secondTeamResult)
+    //    //        _firstTeamWinText.gameObject.SetActive(true);
+    //    //}
+    //}
 }

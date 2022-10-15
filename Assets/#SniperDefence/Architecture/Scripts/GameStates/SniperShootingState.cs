@@ -11,8 +11,8 @@ public class SniperShootingState : IGameState
     private readonly TeamEnemy _teamEnemy;
     private readonly Bank _bank;
 
-  public SniperShootingState(UI uI, CameraController cameraController,
-          Sniper sniper, PlaceHolder placeHolder, Battle battle, TeamEnemy teamEnemy, Bank bank)
+    public SniperShootingState(UI uI, CameraController cameraController,
+            Sniper sniper, PlaceHolder placeHolder, Battle battle, TeamEnemy teamEnemy, Bank bank)
     {
         _uI = uI;
         _cameraController = cameraController;
@@ -26,20 +26,14 @@ public class SniperShootingState : IGameState
     public void Enter()
     {
         //Debug.Log("ShootingState - Enter");
-        //_battle.WavesManager.InitializeWave();
+
         //_battle.WavesManager.CurrentWave.Enable();
         _battle.InitializeEnemies();
 
-
-
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
-        //for (int i = 0; i < _teamEnemy.Units.Count; i++)
         {
             _battle.WavesManager.CurrentWave.Units[i].Died += OnDied;
-            //Debug.Log(_battle.WavesManager.CurrentWave.Units[i]);
-            //Debug.Log(_battle.WavesManager.CurrentWave);
             _battle.WavesManager.CurrentWave.Units[i].SetWaiting();
-            //_teamEnemy.Units[i].SetWaiting();
         }
 
         for (int i = 0; i < _battle.TeamDefender.Units.Count; i++)
@@ -48,10 +42,9 @@ public class SniperShootingState : IGameState
         }
 
         _cameraController.PlayableDirectorFinished += Enable;
-
         _placeHolder.enabled = false;
-        _uI.SniperMenu.Show();
 
+        _uI.SniperMenu.Show();
         _cameraController.ActivateShowSniperRoutine();
     }
 
@@ -66,11 +59,9 @@ public class SniperShootingState : IGameState
         _cameraController.PlayableDirectorFinished -= Enable;
 
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
-            //for (int i = 0; i < _teamEnemy.Units.Count; i++)
         {
             _battle.WavesManager.CurrentWave.Units[i].Died -= OnDied;
-            //Debug.Log(_battle.WavesManager.CurrentWave.Units[i]);
-            //Debug.Log(_battle.WavesManager.CurrentWave);
+
             //_battle.WavesManager.CurrentWave.Units[i].SetWaiting();
             //_teamEnemy.Units[i].SetWaiting();
         }

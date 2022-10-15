@@ -10,13 +10,13 @@ public class PlaceHolder : MonoBehaviour
 
     private DiContainer _diContainer;
 
+    public event Action<DefenderSquad> Spawned;
+
     [Inject]
     private void Constructor(DiContainer diContainer)
     {
         _diContainer = diContainer;
     }
-
-    public event Action<DefenderSquad> Spawned;
 
     private void OnEnable()
     {
@@ -46,19 +46,14 @@ public class PlaceHolder : MonoBehaviour
 
     private void SpawnDefender(DefenderSquad defenderSquad)
     {
-        //var defenders = defenderSquad.GetComponentsInChildren<Defender>();
         int count = 0;
 
         for (int i = 0; i < _grids.Count; i++)
         {
             if (_grids[i].IsBusy == false)
             {
-                //for (int j = 0; j < defenders.Length; j++)
-                //{
-                //    defenders[i]
-                //}
                 DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
-        //DefenderSquad newDefenderSquad = Instantiate(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
+                //DefenderSquad newDefenderSquad = Instantiate(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
                 Debug.Log("SpawnDefender");
                 Spawned?.Invoke(newDefenderSquad);
                 _grids[i].AddDefenderSquad(newDefenderSquad);

@@ -13,11 +13,6 @@ namespace UnitState
 
         public void Enter()
         {
-            if (_unit is Enemy)
-            {
-                //Debug.Log("Move - Enter - " + _unit
-            }
-
             _unit.NavMeshAgent.enabled = true;
             _unit.NavMeshAgent.speed = 3f;
             _unit.UnitAnimator.ShowRun();
@@ -26,11 +21,6 @@ namespace UnitState
 
         public void Exit()
         {
-            if (_unit is Enemy)
-            {
-                //Debug.Log("Move - Exit - " + _unit);
-            }
-
             _unit.UnitAnimator.ResetTrigger();
             //_unit.NavMeshAgent.enabled = false;
 
@@ -39,10 +29,6 @@ namespace UnitState
 
         public void FixedUpdate()
         {
-            if (_unit is Fighter)
-            {
-                //Debug.Log("MovementState");
-            }
             _unit.NavMeshAgent.SetDestination(_unit.Target.transform.position);
             if (Vector3.Distance(_unit.transform.position, _unit.Target.transform.position) < _unit.HitDistance)
                 _unit.StartFighting();

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class ButtonForBuyingFigther : BuyButton
 {
     protected override void OnButtonClick()
