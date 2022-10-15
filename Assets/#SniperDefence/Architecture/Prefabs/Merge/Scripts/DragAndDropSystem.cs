@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class DragAndDropSystem : MonoBehaviour
 {
@@ -10,21 +12,29 @@ public class DragAndDropSystem : MonoBehaviour
     [SerializeField] private DefenderFactory _defenderFactory;
     [SerializeField] private Color _activeGridColor;
     [SerializeField] private Color _inactiveGridColor;
+    [SerializeField] private PlaceHolder _placeHolder;
 
     private Grid _activeGrid;
     private Grid _hoverGrid;
     private DefenderSquad _activeDefenderSquad;
     private bool _isDrag = false;
     private float _rayDistance = float.PositiveInfinity;
+    private DiContainer _diContainer;
 
-    public event Action<DefenderSquad, DefenderSquad, DefenderSquad> Merged;
+    //public event Action<DefenderSquad, DefenderSquad, DefenderSquad> Merged;
 
     private void Update()
     {
         Hit();
     }
 
-    private void Hit()
+    [Inject]
+    private void Constructor(DiContainer diContainer)
+    {
+        _diContainer = diContainer;
+    }
+
+        private void Hit()
     {
         RaycastHit hit;
 
@@ -89,9 +99,13 @@ public class DragAndDropSystem : MonoBehaviour
         Destroy(_activeGrid.DefenderSquad.gameObject);
         DefenderSquad defenderSquad =
           _defenderFactory.GetDefenderSquad(_activeGrid.DefenderSquad.Level + 1, _activeGrid.DefenderSquad.Type);
-        DefenderSquad newDefenderSquad = Instantiate(defenderSquad, grid.transform.position, Quaternion.identity, null);
-        Merged?.Invoke(newDefenderSquad, grid.DefenderSquad, _activeGrid.DefenderSquad);
-        grid.AddDefenderSquad(newDefenderSquad);
+        //DefenderSquad newDefenderSquad = Instantiate(defenderSquad, grid.transform.position, Quaternion.identity, null);
+
+        _placeHolder.Instantiate(defenderSquad, grid, _activeGrid);
+        //DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, grid.transform.position, Quaternion.identity, null);
+
+        //Merged?.Invoke(newDefenderSquad, grid.DefenderSquad, _activeGrid.DefenderSquad);
+        //grid.AddDefenderSquad(newDefenderSquad);
         _activeGrid.DeleteUnits();
         _activeGrid.MakeIsFree();
         _activeGrid.MakeIsInactive();

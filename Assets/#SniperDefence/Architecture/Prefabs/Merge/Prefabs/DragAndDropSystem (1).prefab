@@ -122,3 +122,4 @@ MonoBehaviour:
   _defenderFactory: {fileID: 2136277890591711357}
   _activeGridColor: {r: 0.383329, g: 1, b: 0.33490568, a: 1}
   _inactiveGridColor: {r: 1, g: 1, b: 1, a: 1}
+  _placeHolder: {fileID: 0}

@@ -29,7 +29,7 @@ public class SniperShootingState : IGameState
 
         //_battle.WavesManager.CurrentWave.Enable();
         _battle.InitializeEnemies();
-
+        _battle.DefenderWon += _placeHolder.SetPositionDefenderSquads;
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
         {
             _battle.WavesManager.CurrentWave.Units[i].Died += OnDied;
@@ -66,7 +66,8 @@ public class SniperShootingState : IGameState
             //_battle.WavesManager.CurrentWave.Units[i].SetWaiting();
             //_teamEnemy.Units[i].SetWaiting();
         }
-        _placeHolder.ChangePosition();
+        _placeHolder.ChangePosition(_battle.WavesManager.CurrentWaveIndex);
+        _battle.DefenderWon -= _placeHolder.SetPositionDefenderSquads;
     }
 
     private void Enable()

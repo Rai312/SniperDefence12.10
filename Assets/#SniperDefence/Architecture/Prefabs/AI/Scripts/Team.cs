@@ -9,9 +9,10 @@ public abstract class Team : MonoBehaviour
     [SerializeField] private TeamContainer _teamContainer;
 
     public TeamContainer TeamContainer => _teamContainer;
-
     public IReadOnlyList<Unit> Units => _units;
     public bool IsAlive { get; private set; } = true;
+
+    public event Action Died;
     
     public void AddSpawned(DefenderSquad defenderSquat, TeamContainer teamContainer)
     {

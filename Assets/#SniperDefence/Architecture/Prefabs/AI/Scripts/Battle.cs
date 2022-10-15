@@ -53,7 +53,9 @@ public class Battle : MonoBehaviour
             unit.Initialize(_teamDefender.Units);
             //unit.Died += CheckWin;
             unit.Died += CheckWinDefenders;
+            
         }
+        //_wavesManager.CurrentWave.Died += CheckWinDefenders;
     }
 
     private void CheckWinDefenders()
@@ -62,6 +64,7 @@ public class Battle : MonoBehaviour
         if (isLoserEnemyTeam)
         {
             DefenderWon?.Invoke();
+            _wavesManager.SetNextWave();
             Debug.Log("isLoserEnemyTeam");
             Debug.Log("œŒ‘» —»");
             //_wavesManager.ChangeWave();
