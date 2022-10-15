@@ -19,6 +19,7 @@ public class PlayState : IGameState
     {
         //Debug.Log("PlayState - Enter");
         _placeHolder.gameObject.SetActive(true);
+        _placeHolder.Enable();
         _uI.PlayMenu.Show();
 
         _placeHolder.Spawned += OnSpawned;
@@ -31,12 +32,13 @@ public class PlayState : IGameState
         _placeHolder.Spawned -= OnSpawned;
 
         _battle.TeamDefender.DragAndDropSystem.Merged -= OnMerged;
+        _placeHolder.gameObject.SetActive(false);
         _placeHolder.Disable();
 
         _battle.InitializeDefenders();
         _battle.TeamDefender.DragAndDropSystem.gameObject.SetActive(false);
 
-        _placeHolder.gameObject.SetActive(false);
+        //_placeHolder.gameObject.SetActive(false);
         _battle.WavesManager.CurrentWave.Enable();
         //Debug.Log("PlayState - Exit");
     }

@@ -94,10 +94,11 @@ MonoBehaviour:
   _unitAnimator: {fileID: 8162730129867451581}
   _navMeshAgent: {fileID: 2214694934434695314}
   _hitDistance: 2.5
-  _targetDistance: 7
+  _targetDistance: 20
   _health: 200
   _damage: 120
   _deathParticle: {fileID: 0}
+  _finishPointsDefender: {fileID: 0}
 --- !u!195 &2214694934434695314
 NavMeshAgent:
   m_ObjectHideFlags: 0

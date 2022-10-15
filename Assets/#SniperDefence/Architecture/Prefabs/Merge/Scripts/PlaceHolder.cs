@@ -7,15 +7,17 @@ public class PlaceHolder : MonoBehaviour
 {
     [SerializeField] private List<Grid> _grids = new List<Grid>();
     [SerializeField] private BuyButton[] _buyButtons;
+    [SerializeField] private CheckPoint _checkPoint;
 
     private DiContainer _diContainer;
 
     public event Action<DefenderSquad> Spawned;
 
     [Inject]
-    private void Constructor(DiContainer diContainer)
+    private void Constructor(DiContainer diContainer, CheckPoint checkPoint)
     {
         _diContainer = diContainer;
+        _checkPoint = checkPoint;
     }
 
     private void OnEnable()
@@ -44,6 +46,11 @@ public class PlaceHolder : MonoBehaviour
         enabled = false;
     }
 
+    public void ChangePosition()
+    {
+        transform.position = _checkPoint.transform.position;
+    }
+
     private void SpawnDefender(DefenderSquad defenderSquad)
     {
         int count = 0;
@@ -54,7 +61,7 @@ public class PlaceHolder : MonoBehaviour
             {
                 DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
                 //DefenderSquad newDefenderSquad = Instantiate(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
-                Debug.Log("SpawnDefender");
+                //Debug.Log("SpawnDefender");
                 Spawned?.Invoke(newDefenderSquad);
                 _grids[i].AddDefenderSquad(newDefenderSquad);
                 _grids[i].MakeIsBusy();

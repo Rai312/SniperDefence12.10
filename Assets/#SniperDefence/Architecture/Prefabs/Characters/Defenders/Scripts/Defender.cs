@@ -1,25 +1,33 @@
 ﻿using UnityEngine.AI;
 using Zenject;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Defender : Unit
 {
-    [SerializeField] private ContainerFinsihPointsDefender _containerFinsihPointsDefender;
+    [SerializeField] private FinishPointsDefender _finishPointsDefender;
 
     private NavMeshAgent _navmeshAgent;
     private FinishPoint[] _finishPoints;
     private FinishPoint _finishPoint;
+    private Vector3 _position;
 
     [Inject]
-    private void Construct(ContainerFinsihPointsDefender containerFinsihPointsDefender)
+    private void Construct(FinishPointsDefender finishPointsDefender)
     {
-        _containerFinsihPointsDefender = containerFinsihPointsDefender;
+        _finishPointsDefender = finishPointsDefender;
     }
 
     private void Awake()
     {
-        // SetFinishTarget();
+         SetFinishTarget();
         _navmeshAgent = GetComponent<NavMeshAgent>();
+    }
+
+    public override void Initialize(IReadOnlyList<Unit> enemies)
+    {
+        base.Initialize(enemies);
+
     }
 
     public void ActivateNavMeshAgent()
@@ -43,7 +51,7 @@ public class Defender : Unit
 
     public void SetFinishTarget()
     {
-        _finishPoints = _containerFinsihPointsDefender.GetComponentsInChildren<FinishPoint>();
+        _finishPoints = _finishPointsDefender.GetComponentsInChildren<FinishPoint>();
         int randomIndex = Random.Range(0, _finishPoints.Length);
         _finishPoint = _finishPoints[randomIndex];
     }

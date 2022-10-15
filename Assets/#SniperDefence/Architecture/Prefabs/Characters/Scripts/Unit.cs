@@ -37,9 +37,8 @@ public abstract class Unit : MonoBehaviour
     public event Action Fight;
     public event Action Died;
 
-    public void Initialize(IReadOnlyList<Unit> enemies)
+    public virtual void Initialize(IReadOnlyList<Unit> enemies)
     {
-        //SetFinishTarget();
         if (enemies == null)
             throw new ArgumentNullException("Unit is not initialized by enemies.");
         _currentHealth = _health;
@@ -57,30 +56,6 @@ public abstract class Unit : MonoBehaviour
         //    _target.Died -= OnTargetDied;
     }
 
-    //public void DebugTargets()
-    //{
-    //    for (int i = 0; i < _targets.Count; i++)
-    //    {
-    //        if (this is Enemy)
-    //        {
-    //            //Debug.Log(_targets[i]);
-    //        }
-
-    //    }
-    //}
-
-    //public void SetFinishTarget()
-    //{
-    //    _finishPoints = _containerFinishPoints.GetComponentsInChildren<FinishPoint>();
-    //    int randomIndex = UnityEngine.Random.Range(0, _finishPoints.Length);
-    //    //Debug.Log(randomIndex);
-    //    _finishPoint = _finishPoints[randomIndex];
-    //}
-
-    //public void MoveToFinish()
-    //{
-    //    _navMeshAgent.SetDestination(_finishPoint.transform.position);
-    //}
 
     public void SetTarget()
     {

@@ -63,6 +63,7 @@ public class Battle : MonoBehaviour
         {
             DefenderWon?.Invoke();
             Debug.Log("isLoserEnemyTeam");
+            Debug.Log("œŒ‘» —»");
             //_wavesManager.ChangeWave();
         }
     }

@@ -42,7 +42,7 @@ public class SniperShootingState : IGameState
         }
 
         _cameraController.PlayableDirectorFinished += Enable;
-        _placeHolder.enabled = false;
+        //_placeHolder.enabled = false;
 
         _uI.SniperMenu.Show();
         _cameraController.ActivateShowSniperRoutine();
@@ -66,6 +66,7 @@ public class SniperShootingState : IGameState
             //_battle.WavesManager.CurrentWave.Units[i].SetWaiting();
             //_teamEnemy.Units[i].SetWaiting();
         }
+        _placeHolder.ChangePosition();
     }
 
     private void Enable()

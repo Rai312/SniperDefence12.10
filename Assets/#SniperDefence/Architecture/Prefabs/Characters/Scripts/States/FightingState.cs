@@ -19,10 +19,15 @@ namespace UnitState
         public void Exit()
         {
             _unit.UnitAnimator.ResetTrigger();
-            if (_unit is Enemy)
+            //if (_unit is Enemy)
+            //{
+            //    Enemy enemy = (Enemy)_unit;
+            //    enemy.MoveToFinish();
+            //}
+            if (_unit is Defender)
             {
-                Enemy enemy = (Enemy)_unit;
-                enemy.MoveToFinish();
+                Defender defender = (Defender)_unit;
+                defender.MoveToFinish();
             }
         }
 
