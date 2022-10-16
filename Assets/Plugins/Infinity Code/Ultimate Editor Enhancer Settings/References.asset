@@ -176,6 +176,8 @@ MonoBehaviour:
     alignWindowToBar: 1
     windowMode: 0
   _sceneHistory:
+  - name: Test
+    path: Assets/#SniperDefence/Scenes/Test.unity
   - name: Level_01Danil
     path: Assets/#SniperDefence/Scenes/Level_01Danil.unity
   - name: Level_01Max
