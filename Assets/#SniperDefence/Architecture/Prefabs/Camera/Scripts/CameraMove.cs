@@ -1,6 +1,3 @@
-
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -9,12 +6,6 @@ public class CameraMove : MonoBehaviour
     [SerializeField] private PlayableDirector _playableDirector;
 
     private int _pathPointIndex = 0;
-
-    // private void Update()
-    // {
-    //     if (Input.GetMouseButton(1)) 
-    //         PlayAnimation();
-    // }
 
     private void OnTriggerEnter(Collider other)
     {

@@ -1,7 +1,4 @@
-﻿using Unity.VisualScripting;
-using UnityEngine;
-using ImpossibleOdds.MouseEvents;
-using UnityEngine.Playables;
+﻿using UnityEngine;
 
 public class CameraRotator : MonoBehaviour
 {

@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a2149dc-5070-4537-999b-d4250f6ae19a" name="Changes" comment="" />
+    <list default="true" id="9a2149dc-5070-4537-999b-d4250f6ae19a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SniperDefence12.10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SniperDefence12.10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Battle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Battle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Team.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Team.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamDefender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamDefender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/LelelsPath.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/LelelsPath/CameraPathLvl1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/LelelsPath/CameraPathLvl1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/OpticalSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/OpticalSight.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/acbcf533a6064e7f9dfb5a61116b6fe24000/1d/8305eeab/PlayableDirector.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -18,15 +27,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath D:\Repository\SniperDefence12.10 -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Repository\SniperDefence12.10" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -57,6 +75,8 @@
       <option name="presentableId" value="Default" />
       <updated>1665811551882</updated>
       <workItem from="1665811572744" duration="11439000" />
+      <workItem from="1667137546007" duration="652000" />
+      <workItem from="1667416151691" duration="537000" />
     </task>
     <servers />
   </component>
@@ -66,6 +86,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

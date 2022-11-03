@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Team : MonoBehaviour
@@ -53,7 +52,6 @@ public abstract class Team : MonoBehaviour
             if (unit.IsAlive)
                 return false;
         }
-
         return true;
     }
 }
