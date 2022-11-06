@@ -7,12 +7,9 @@ public class PlaceHolder : MonoBehaviour
 {
     [SerializeField] private List<Grid> _grids = new List<Grid>();
     [SerializeField] private BuyButton[] _buyButtons;
-    //[SerializeField] private CheckPoint _checkPoint;
     [SerializeField] private List<CheckPoint> _checkPoints;
-    
 
     private DiContainer _diContainer;
-    //private List<DefenderSquad> _spawnedDefenders = new List<DefenderSquad>();
     private List<DefenderSquad> _spawnedDefendersMap = new List<DefenderSquad>();
 
     public event Action<DefenderSquad> Spawned;
@@ -41,27 +38,20 @@ public class PlaceHolder : MonoBehaviour
         }
     }
 
-    public void Initialize()
-    {
-        
-    }
-
     public void SetPositionDefenderSquads()
     {
-        Debug.Log("SetPositionDefenderSquads");
         for (int i = 0; i < _grids.Count; i++)
         {
             if (_grids[i].DefenderSquad != null)
-            {
-            _grids[i].DefenderSquad.transform.position = _grids[i].transform.position;
-
-            }
+                _grids[i].DefenderSquad.transform.position = _grids[i].transform.position;
         }
     }
 
     public void Instantiate(DefenderSquad defenderSquad, Grid grid, Grid activeGrid)
     {
-        DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, grid.transform.position, Quaternion.identity, null);
+        DefenderSquad newDefenderSquad =
+            _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, grid.transform.position,
+                Quaternion.identity, null);
         Merged?.Invoke(newDefenderSquad, grid.DefenderSquad, activeGrid.DefenderSquad);
         grid.AddDefenderSquad(newDefenderSquad);
         _spawnedDefendersMap.Add(newDefenderSquad);
@@ -90,9 +80,9 @@ public class PlaceHolder : MonoBehaviour
         {
             if (_grids[i].IsBusy == false)
             {
-                DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, _grids[i].transform.position, Quaternion.identity, null);
-                
-                //_spawnedDefendersMap.Add(i, newDefenderSquad);
+                DefenderSquad newDefenderSquad =
+                    _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad,
+                        _grids[i].transform.position, Quaternion.identity, null);
 
                 Spawned?.Invoke(newDefenderSquad);
                 _grids[i].AddDefenderSquad(newDefenderSquad);

@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -21,8 +19,6 @@ public class DragAndDropSystem : MonoBehaviour
     private float _rayDistance = float.PositiveInfinity;
     private DiContainer _diContainer;
 
-    //public event Action<DefenderSquad, DefenderSquad, DefenderSquad> Merged;
-
     private void Update()
     {
         Hit();
@@ -34,31 +30,26 @@ public class DragAndDropSystem : MonoBehaviour
         _diContainer = diContainer;
     }
 
-        private void Hit()
+    private void Hit()
     {
         RaycastHit hit;
 
-        //if (Input.GetMouseButton(0))
-        // {
-        //Touch touch = Input.GetTouch(0);
-
-        Ray ray = Camera.main.ScreenPointToRay(/*touch.position*/Input.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         if (Physics.Raycast(ray, out hit, _rayDistance, _gridLayerMask))
             GetInfoAboutGrid(hit);
 
-        if (/*touch.phase == TouchPhase.Moved*/ Input.GetMouseButton(0) && _isDrag)
+        if (Input.GetMouseButton(0) && _isDrag)
         {
             _activeGrid.ChangeColor(_activeGridColor);
             StartDrag(ray);
         }
 
-        if (/*touch.phase == TouchPhase.Ended && _isDrag || touch.phase == TouchPhase.Canceled*/ Input.GetMouseButtonUp(0) && _isDrag)
+        if (Input.GetMouseButtonUp(0) && _isDrag)
         {
             _activeGrid.ChangeColor(_inactiveGridColor);
             StopDrag(ray);
         }
-        //  }
     }
 
     private void StopDrag(Ray ray)
@@ -98,14 +89,9 @@ public class DragAndDropSystem : MonoBehaviour
         Destroy(grid.DefenderSquad.gameObject);
         Destroy(_activeGrid.DefenderSquad.gameObject);
         DefenderSquad defenderSquad =
-          _defenderFactory.GetDefenderSquad(_activeGrid.DefenderSquad.Level + 1, _activeGrid.DefenderSquad.Type);
-        //DefenderSquad newDefenderSquad = Instantiate(defenderSquad, grid.transform.position, Quaternion.identity, null);
+            _defenderFactory.GetDefenderSquad(_activeGrid.DefenderSquad.Level + 1, _activeGrid.DefenderSquad.Type);
 
         _placeHolder.Instantiate(defenderSquad, grid, _activeGrid);
-        //DefenderSquad newDefenderSquad = _diContainer.InstantiatePrefabForComponent<DefenderSquad>(defenderSquad, grid.transform.position, Quaternion.identity, null);
-
-        //Merged?.Invoke(newDefenderSquad, grid.DefenderSquad, _activeGrid.DefenderSquad);
-        //grid.AddDefenderSquad(newDefenderSquad);
         _activeGrid.DeleteUnits();
         _activeGrid.MakeIsFree();
         _activeGrid.MakeIsInactive();

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -34,7 +33,7 @@ public abstract class Unit : MonoBehaviour
     public event Action Fight;
     public event Action Died;
 
-    public virtual void Initialize(IReadOnlyList<Unit> enemies)
+    public void Initialize(IReadOnlyList<Unit> enemies)
     {
         if (enemies == null)
             throw new ArgumentNullException("Unit is not initialized by enemies.");
@@ -139,6 +138,7 @@ public abstract class Unit : MonoBehaviour
         return nearestTarget;
     }
     
+    //Need refactoring this method
     private Unit GetTarget()
     {
         Unit nearestTarget = null;
@@ -147,17 +147,37 @@ public abstract class Unit : MonoBehaviour
         if (this is Enemy)
         {
             for (int i = 0; i < _targets.Count; i++)
+            {
                 if (_targets[i] is Defender && _targets[i].IsAlive)
-                    TrySetTarget(i, nearestTarget, distanceToNearestTarget);
-
+                {
+                    //TrySetTarget(i, nearestTarget, distanceToNearestTarget);
+                    float distanceToTarget = Vector3.Distance(transform.position, _targets[i].transform.position);
+                    
+                    if (distanceToTarget < distanceToNearestTarget)
+                    {
+                        nearestTarget = _targets[i];
+                        distanceToNearestTarget = distanceToTarget;
+                    }
+                }
+            }
             return nearestTarget;
         }
         else
         {
             for (int i = 0; i < _targets.Count; i++)
+            {
                 if (_targets[i] is Enemy && _targets[i].IsAlive)
-                    TrySetTarget(i, nearestTarget, distanceToNearestTarget);
-
+                {
+                    //TrySetTarget(i, nearestTarget, distanceToNearestTarget);
+                    float distanceToTarget = Vector3.Distance(transform.position, _targets[i].transform.position);
+                    
+                    if (distanceToTarget < distanceToNearestTarget)
+                    {
+                        nearestTarget = _targets[i];
+                        distanceToNearestTarget = distanceToTarget;
+                    }
+                }
+            }
             return nearestTarget;
         }
     }

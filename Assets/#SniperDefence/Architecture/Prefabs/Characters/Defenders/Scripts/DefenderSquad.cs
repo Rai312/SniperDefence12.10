@@ -1,34 +1,18 @@
 using UnityEngine;
-using Zenject;
 
 public class DefenderSquad : MonoBehaviour
 {
-    //[field: SerializeField] public ContainerFinsihPointsDefender _containerFinsihPointsDefender { get; private set; }
     [field: SerializeField] public DefenderType Type { get; private set; }
     [field: SerializeField] public int Level { get; private set; }
-
-    //[Inject]
-    //private void Construct(ContainerFinsihPointsDefender containerFinsihPointsDefender)
-    //{
-    //    _containerFinsihPointsDefender = containerFinsihPointsDefender;
-    //}
-
+    
     private int _recalculate = 2; 
+    private Defender[] _defenders;
 
     public int Price { get; private set; } = 25;
     
-
-    private Defender[] _defenders;
-
     private void Awake()
     {
         _defenders = GetComponentsInChildren<Defender>();
-    }
-
-    public void IncreasePrice()
-    {
-        Price *= _recalculate;
-        //_recalculate
     }
 
     public void DeactivateNavMesh()
