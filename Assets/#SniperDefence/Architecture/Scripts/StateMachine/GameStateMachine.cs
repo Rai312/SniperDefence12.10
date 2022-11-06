@@ -99,8 +99,6 @@ public class GameStateMachine : MonoBehaviour
 
     private void SetStateByDefault()
     {
-        //SetPlayState();
-        //SetOpeningState();
         SetInitialState();
     }
 

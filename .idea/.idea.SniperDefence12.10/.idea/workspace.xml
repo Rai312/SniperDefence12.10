@@ -3,16 +3,42 @@
   <component name="ChangeListManager">
     <list default="true" id="9a2149dc-5070-4537-999b-d4250f6ae19a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SniperDefence12.10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SniperDefence12.10/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Battle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Battle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Team.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/Team.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamDefender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamDefender.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/LelelsPath.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/LelelsPath/CameraPathLvl1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/LelelsPath/CameraPathLvl1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraMove.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraRotator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/CameraRotator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/AI/Scripts/TeamEnemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Bank/Scripts/Bank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Bank/Scripts/Bank.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/OpticalSight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/OpticalSight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/PlayablePaused.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Camera/Scripts/PlayablePaused.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Scripts/Defender.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Scripts/Defender.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Scripts/DefenderAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Scripts/DefenderAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Fence/Scripts/Fencing.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Fence/Scripts/Fencing.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Fighter/Scripts/Fighter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Fighter/Scripts/Fighter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Shooter/Scripts/BallisticsShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Shooter/Scripts/BallisticsShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Shooter/Scripts/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Defenders/Skins/Shooter/Scripts/Shooter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Enemies/Scripts/EnemyAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Enemies/Scripts/EnemyAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/DiedState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/DiedState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/FightingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/FightingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/MovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/MovementState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/StartState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/StartState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/TargetSearchState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/TargetSearchState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/WaitingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/States/WaitingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/UnitStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Characters/Scripts/UnitStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Sniper/Scripts/Sniper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Prefabs/Sniper/Scripts/Sniper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/EndLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/EndLevelState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/FailState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/FailState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/InitialState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/InitialState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/OpeningState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/OpeningState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/PauseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/PauseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/PlayState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/PlayState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/SniperShootingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/GameStates/SniperShootingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/StateMachine/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/Architecture/Scripts/StateMachine/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Architecture/Scripts/UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Architecture/Scripts/UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Buttons/ButtonSelectionLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Buttons/ButtonSelectionLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/EndLevelMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/EndLevelMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/FailMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/FailMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/PlayMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/PlayMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/SettingsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/SettingsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/SniperMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#SniperDefence/UI/Scripts/Menu/SniperMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +103,7 @@
       <workItem from="1665811572744" duration="11439000" />
       <workItem from="1667137546007" duration="652000" />
       <workItem from="1667416151691" duration="537000" />
+      <workItem from="1667750282527" duration="9069000" />
     </task>
     <servers />
   </component>

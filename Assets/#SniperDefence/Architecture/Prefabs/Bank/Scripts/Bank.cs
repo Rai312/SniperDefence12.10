@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Bank : MonoBehaviour
 {
-
+    [SerializeField] private int _startBalance = 50;
+    
     private int _money;
-
+    
     public event Action MoneyChanged;
 
     public int Money => _money;
+    public int StartBalance => _startBalance;
 
     public void AddMoney(int value)
     {

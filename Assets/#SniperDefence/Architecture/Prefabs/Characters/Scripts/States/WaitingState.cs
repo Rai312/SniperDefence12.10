@@ -12,17 +12,12 @@ namespace UnitState
         public void Enter()
         {
             _unit.UnitAnimator.ShowIdle();
-            //if (_unit is Enemy)
-            //{
-            //    Enemy enemy = (Enemy)_unit;
-            //    enemy.MoveToFinish();
-            //    enemy.NavMeshAgent.speed = 3f;
-            //}
+
             if (_unit is Defender)
             {
                 Defender defender = (Defender)_unit;
                 defender.MoveToFinish();
-                defender.NavMeshAgent.speed = 3f;
+                defender.NavMeshAgent.speed = defender.Speed;
             }
         }
 

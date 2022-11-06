@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine;
-
-public class SniperShootingState : IGameState
+﻿public class SniperShootingState : IGameState
 {
     private readonly UI _uI;
     private readonly CameraController _cameraController;
@@ -25,11 +22,9 @@ public class SniperShootingState : IGameState
 
     public void Enter()
     {
-        //Debug.Log("ShootingState - Enter");
-
-        //_battle.WavesManager.CurrentWave.Enable();
         _battle.InitializeEnemies();
         _battle.DefenderWon += _placeHolder.SetPositionDefenderSquads;
+        
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
         {
             _battle.WavesManager.CurrentWave.Units[i].Died += OnDied;
@@ -42,8 +37,6 @@ public class SniperShootingState : IGameState
         }
 
         _cameraController.PlayableDirectorFinished += Enable;
-        //_placeHolder.enabled = false;
-
         _uI.SniperMenu.Show();
         _cameraController.ActivateShowSniperRoutine();
         _cameraController.CameraMove.PlayAnimation();
@@ -60,12 +53,8 @@ public class SniperShootingState : IGameState
         _cameraController.PlayableDirectorFinished -= Enable;
 
         for (int i = 0; i < _battle.WavesManager.CurrentWave.Units.Count; i++)
-        {
             _battle.WavesManager.CurrentWave.Units[i].Died -= OnDied;
 
-            //_battle.WavesManager.CurrentWave.Units[i].SetWaiting();
-            //_teamEnemy.Units[i].SetWaiting();
-        }
         _placeHolder.ChangePosition(_battle.WavesManager.CurrentWaveIndex);
         _battle.DefenderWon -= _placeHolder.SetPositionDefenderSquads;
     }

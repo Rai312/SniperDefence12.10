@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace UnitState
+﻿namespace UnitState
 {
     public class StartState : IUnitState
     {
@@ -13,26 +11,14 @@ namespace UnitState
 
         public void Enter()
         {
-            if (_unit is Enemy)
-            {
-                //Debug.Log("StartState - Enter - " + _unit);
-            }
         }
 
         public void Exit()
         {
-            if (_unit is Enemy)
-            {
-                //Debug.Log("StartState - Exit - " + _unit);
-            }
         }
 
         public void FixedUpdate()
         {
-            if (_unit is Fighter)
-            {
-                //Debug.Log("StartState");
-            }
         }
     }
 }

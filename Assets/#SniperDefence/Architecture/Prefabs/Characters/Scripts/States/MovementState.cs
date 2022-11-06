@@ -22,8 +22,6 @@ namespace UnitState
         public void Exit()
         {
             _unit.UnitAnimator.ResetTrigger();
-            //_unit.NavMeshAgent.enabled = false;
-
             _unit.NavMeshAgent.speed = 0;
         }
 

@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class InitialState : IGameState
 {
     private readonly UI _uI;
@@ -19,17 +15,12 @@ public class InitialState : IGameState
 
     public void Enter()
     {
-        //Debug.Log("InitialState - Enter");
         _battle.WavesManager.Initialize();
         _uI.OpeningMenu.Show();
-        _bank.AddMoney(50);
-
-        //_battle.InitializeEnemies();
-        //_battle.WavesManager.InitializeWaves();
+        _bank.AddMoney(_bank.StartBalance);
     }
 
     public void Exit()
     {
-        //Debug.Log("InitialState - Exit");
     }
 }

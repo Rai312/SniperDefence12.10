@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnitState;
 
@@ -91,7 +89,6 @@ public class UnitStateMachine : MonoBehaviour
 
     private void SetStateByDefault()
     {
-        //SetWaitingState();
         SetStartState();
     }
 

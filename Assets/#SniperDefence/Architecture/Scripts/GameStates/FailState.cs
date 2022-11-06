@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class FailState : IGameState
 {
     private readonly UI _uI;

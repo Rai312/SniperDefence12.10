@@ -1,1 +1,3 @@
-public class TeamEnemy : Team { }
+public class TeamEnemy : Team
+{
+}

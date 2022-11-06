@@ -1,1 +1,3 @@
-public class DefenderAnimator : UnitAnimator { }
+public class DefenderAnimator : UnitAnimator
+{
+}

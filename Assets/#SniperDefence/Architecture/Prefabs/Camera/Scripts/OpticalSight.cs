@@ -9,7 +9,7 @@ public class OpticalSight : MonoBehaviour
     [SerializeField] private GameObject _sight;
 
     private Camera _camera;
-    private float _maximuFov = 60;
+    private float _maximumFov = 60;
     private float _duration = 0.5f;
     private float _targetFieldOfView = 41;
     private float _targetZoom;
@@ -43,7 +43,7 @@ public class OpticalSight : MonoBehaviour
         {
             _elapsedTime = 0;
             _sight.SetActive(true);
-            _targetZoom = _maximuFov - _startZoom;
+            _targetZoom = _maximumFov - _startZoom;
             _fieldFovAnimation = _camera.DOFieldOfView(_targetZoom, _duration);
         }
 
@@ -72,8 +72,8 @@ public class OpticalSight : MonoBehaviour
     private void Hide()
     {
         _sight.SetActive(false);
-        _targetZoom = _maximuFov;
-        _camera.DOFieldOfView(_maximuFov, _duration);
+        _targetZoom = _maximumFov;
+        _camera.DOFieldOfView(_maximumFov, _duration);
     }
 
     private void Shoot()

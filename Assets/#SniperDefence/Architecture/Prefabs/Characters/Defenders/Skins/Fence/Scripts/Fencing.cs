@@ -1,1 +1,3 @@
-public class Fencing : Defender { }
+public class Fencing : Defender
+{
+}

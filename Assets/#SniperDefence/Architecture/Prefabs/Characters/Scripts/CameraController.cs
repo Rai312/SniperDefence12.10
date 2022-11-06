@@ -5,33 +5,33 @@ using UnityEngine.Playables;
 
 public class CameraController : MonoBehaviour
 {
-  private CameraRotator _cameraRotator;
-  private PlayableDirector _playableDirector;
-  private CameraMove _cameraMove;
-  
-  public CameraRotator CameraRotator => _cameraRotator;
-  public CameraMove CameraMove => _cameraMove;
+    private CameraRotator _cameraRotator;
+    private PlayableDirector _playableDirector;
+    private CameraMove _cameraMove;
 
-  public event Action PlayableDirectorFinished;
+    public CameraRotator CameraRotator => _cameraRotator;
+    public CameraMove CameraMove => _cameraMove;
 
-  private void Awake()
-  {
-    _cameraMove = GetComponent<CameraMove>();
-    _cameraRotator = GetComponent<CameraRotator>();
-    _playableDirector = GetComponent<PlayableDirector>();
-  }
+    public event Action PlayableDirectorFinished;
 
-  private IEnumerator ShowSniper()
-  {
-    float delay = (float)_playableDirector.duration;
-    WaitForSeconds waitForSeconds = new WaitForSeconds(delay);
-    _playableDirector.Play();
-    yield return waitForSeconds;
-    PlayableDirectorFinished?.Invoke();
-  }
+    private void Awake()
+    {
+        _cameraMove = GetComponent<CameraMove>();
+        _cameraRotator = GetComponent<CameraRotator>();
+        _playableDirector = GetComponent<PlayableDirector>();
+    }
 
-  public void ActivateShowSniperRoutine()
-  {
-    StartCoroutine(ShowSniper());
-  }
+    private IEnumerator ShowSniper()
+    {
+        float delay = (float)_playableDirector.duration;
+        WaitForSeconds waitForSeconds = new WaitForSeconds(delay);
+        _playableDirector.Play();
+        yield return waitForSeconds;
+        PlayableDirectorFinished?.Invoke();
+    }
+
+    public void ActivateShowSniperRoutine()
+    {
+        StartCoroutine(ShowSniper());
+    }
 }

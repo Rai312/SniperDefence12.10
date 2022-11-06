@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class PlayState : IGameState
 {
     private readonly UI _uI;
@@ -17,15 +15,11 @@ public class PlayState : IGameState
 
     public void Enter()
     {
-
-        //Debug.Log("PlayState - Enter");
         _placeHolder.gameObject.SetActive(true);
         _placeHolder.Enable();
-
         _uI.PlayMenu.Show();
 
         _placeHolder.Spawned += OnSpawned;
-        //_battle.TeamDefender.DragAndDropSystem.Merged += OnMerged;
         _placeHolder.Merged += OnMerged;
     }
 
@@ -33,8 +27,6 @@ public class PlayState : IGameState
     {
         _uI.PlayMenu.Hide();
         _placeHolder.Spawned -= OnSpawned;
-
-        //_battle.TeamDefender.DragAndDropSystem.Merged -= OnMerged;
         _placeHolder.Merged -= OnMerged;
 
         _placeHolder.gameObject.SetActive(false);
@@ -42,16 +34,11 @@ public class PlayState : IGameState
 
         _battle.InitializeDefenders();
         _battle.TeamDefender.DragAndDropSystem.gameObject.SetActive(false);
-
-        //_placeHolder.gameObject.SetActive(false);
         _battle.WavesManager.CurrentWave.Enable();
-        //Debug.Log("PlayState - Exit");
-
     }
 
     private void OnSpawned(DefenderSquad defenderSquad)
     {
-        //Debug.Log("OnMerged");
         var defenders = defenderSquad.GetComponentsInChildren<Defender>();
 
         for (int i = 0; i < defenders.Length; i++)

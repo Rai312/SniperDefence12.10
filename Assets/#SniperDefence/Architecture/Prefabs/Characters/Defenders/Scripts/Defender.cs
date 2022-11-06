@@ -1,7 +1,6 @@
 ﻿using UnityEngine.AI;
 using Zenject;
 using UnityEngine;
-using System.Collections.Generic;
 
 public class Defender : Unit
 {
@@ -24,12 +23,6 @@ public class Defender : Unit
         _navmeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    public override void Initialize(IReadOnlyList<Unit> enemies)
-    {
-        base.Initialize(enemies);
-
-    }
-
     public void ActivateNavMeshAgent()
     {
         _navmeshAgent.enabled = true;
@@ -39,15 +32,6 @@ public class Defender : Unit
     {
         _navmeshAgent.enabled = false;
     }
-
-    //private void Awake()
-    //{
-    //    SetFinishTarget();
-    //    //_finishPoints = _containerFinishPoints.GetComponentsInChildren<FinishPoint>();
-    //    //int randomIndex = Random.Range(0, _finishPoints.Length);
-    //    ////Debug.Log(randomIndex);
-    //    //_finishPoint = _finishPoints[randomIndex];
-    //}
 
     public void SetFinishTarget()
     {

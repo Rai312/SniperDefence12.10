@@ -1,3 +1,5 @@
 using UnityEngine;
 
-public class PlayablePaused : MonoBehaviour {}
+public class PlayablePaused : MonoBehaviour
+{
+}
